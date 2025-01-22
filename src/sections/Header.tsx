@@ -23,7 +23,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="relative top-3 flex items-center justify-center">
+    <div className="fixed top-3 z-40 flex w-screen items-center justify-center">
       <nav className="flex justify-center gap-1 rounded-full border border-gray-500 bg-white/10 p-0.5 backdrop-blur-sm">
         <a
           className={cn(

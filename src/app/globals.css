@@ -9,4 +9,10 @@
   .selected-nav-item {
     @apply pointer-events-none bg-white text-gray-900;
   }
+  .hero-glow-ring {
+    @apply absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/15;
+  }
+  .center-abs-obj {
+    @apply left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2;
+  }
 }
