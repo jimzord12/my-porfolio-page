@@ -1,20 +1,17 @@
 import Image from "next/image";
 import memojiImage from "@/assets/images/memoji-computer.png";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
-import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import HeroOrbit from "@/components/HeroOrbit";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
+import GrainBG from "@/components/GrainBG";
 
 export const HeroSection = () => {
   return (
     <div className="relative z-0 py-32 md:py-48 lg:py-60">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         {/* Background Grain Image to make the Rings look good */}
-        <div
-          className="absolute inset-0 -z-10 opacity-5"
-          style={{ backgroundImage: `url(${grainImage.src})` }}
-        />
+        <GrainBG />
 
         {/* Rings */}
         <div className="hero-glow-ring size-[620px]" />
@@ -72,8 +69,8 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="max-w-lg">
-          <div className="flex flex-col items-center gap-4 py-8">
+        <div className="mt-8 max-w-lg">
+          <div className="flex flex-col items-center gap-4">
             <h1 className="text-center font-serif text-3xl tracking-wide md:text-5xl">
               Building Exceptional
               <br />
@@ -85,14 +82,15 @@ export const HeroSection = () => {
               project.
             </p>
           </div>
-          <div className="flex flex-col items-center gap-4 md:flex-row md:justify-center">
+
+          <div className="mt-[32.5px] flex flex-col items-center gap-4 md:flex-row md:justify-center">
             <button className="inline-flex h-12 items-center gap-2 rounded-xl border border-white/20 px-6">
               <span>Explore My Work</span>
               <ArrowDown className="size-4" />
             </button>
-            <button className="group inline-flex h-12 items-center gap-2 rounded-xl bg-white px-4">
-              <span className="group-hover:animate-wiggle text-2xl">👋</span>
-              <span className="font-semibold text-gray-900">
+            <button className="group inline-flex h-12 items-center gap-2 rounded-xl bg-white px-6">
+              <span className="text-xl group-hover:animate-wiggle">👋</span>
+              <span className="font-bold text-gray-900">
                 Let&apos;s Connect
               </span>
             </button>
