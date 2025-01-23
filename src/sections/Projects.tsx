@@ -5,7 +5,6 @@ import Image from "next/image";
 import GrainBG from "@/components/GrainBG";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import UpArrowRight from "@/assets/icons/arrow-up-right.svg";
-import { div } from "motion/react-client";
 
 const portfolioProjects = [
   {
