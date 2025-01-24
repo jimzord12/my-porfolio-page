@@ -13,6 +13,10 @@ const config: Config = {
       md: "768px",
       lg: "1200px",
     },
+    outlineOffset: {
+      "-2": "-2px",
+      "-4": "-4px",
+    },
     container: {
       center: true,
       padding: {

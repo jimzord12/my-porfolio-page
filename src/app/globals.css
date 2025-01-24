@@ -16,7 +16,7 @@
     @apply pointer-events-none bg-white text-gray-900;
   }
   .hero-glow-ring {
-    @apply absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/15;
+    @apply absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5;
   }
   .center-abs-obj {
     @apply left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2;
@@ -26,5 +26,14 @@
   }
   .gradient-text {
     @apply bg-gradient-to-r from-green-400 to-sky-500 bg-clip-text text-transparent;
+  }
+  .gradient-bg {
+    @apply bg-gradient-to-r from-green-400 to-sky-500;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply lg:max-w-5xl;
   }
 }

@@ -3,6 +3,9 @@ import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
+import GrainBG from "@/components/GrainBG";
+import SectionHeader from "@/components/SectionHeader";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -38,5 +41,29 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
-  return <div>Testimonials Section</div>;
+  return (
+    <div className="pb-96">
+      <div className="container">
+        <SectionHeader
+          eyebrow="Happy Clients"
+          title="What Clients Say..."
+          description="Don't take my word for it. See what they have to say about my work."
+        />
+      </div>
+      <div>
+        {testimonials.map((t) => (
+          <div
+            key={t.name}
+            className="relative -z-20 overflow-hidden rounded-3xl bg-gray-800 p-6"
+          >
+            <GrainBG />
+            <Image src={t.avatar} alt={t.name} />
+            <div>{t.name}</div>
+            <div>{t.position}</div>
+            <p>{t.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };

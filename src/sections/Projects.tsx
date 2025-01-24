@@ -5,6 +5,7 @@ import Image from "next/image";
 import GrainBG from "@/components/GrainBG";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import UpArrowRight from "@/assets/icons/arrow-up-right.svg";
+import SectionHeader from "@/components/SectionHeader";
 
 const portfolioProjects = [
   {
@@ -49,30 +50,23 @@ export const ProjectsSection = () => {
   return (
     <section className="pb-16 lg:mx-auto lg:max-w-5xl lg:py-24">
       <div className="container">
-        <div className="flex flex-col justify-center">
-          <p className="gradient-text md:text-md text-center font-semibold uppercase tracking-widest">
-            Real-world Results
-          </p>
-        </div>
-
-        <h2 className="mt-6 text-center font-serif text-3xl md:text-5xl">
-          Featured Projects
-        </h2>
-        <p className="secondary-text-color mx-auto mt-4 max-w-md text-center md:text-lg lg:text-xl">
-          See how I transformed concepts into engaging digital experiences.
-        </p>
+        <SectionHeader
+          eyebrow="Real-world Results"
+          title="Featured Projects"
+          description="See how I transformed concepts into engaging digital experiences."
+        />
 
         {/* Cards */}
         <div className="mt-10 flex flex-col gap-[81.5px] md:mt-[82px]">
           {portfolioProjects.map((project, idx) => (
             <div
               key={`${project.title}-${idx}`}
-              className="relative z-0 overflow-hidden rounded-3xl bg-gray-400/10 px-8 pt-8 outline outline-2 outline-slate-400/35 md:px-10 md:pt-12 lg:px-16 lg:py-14"
+              className="relative z-0 overflow-hidden rounded-3xl bg-gray-400/10 px-8 pt-8 outline outline-2 outline-slate-400/30 md:px-10 md:pt-12 lg:px-20 lg:pt-16"
             >
               <GrainBG />
 
-              <div className="flex">
-                <div className="w-1/2 flex-1">
+              <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-16">
+                <div className="lg:pb-16">
                   <div className="gradient-text inline-flex gap-2 text-sm font-extrabold uppercase tracking-widest">
                     <span>{project.company}</span>
                     <span>&bull;</span>
@@ -95,18 +89,20 @@ export const ProjectsSection = () => {
                   </ul>
 
                   <a href={project.link}>
-                    <button className="md: mt-8 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-white font-bold text-gray-950 md:w-auto md:px-8">
+                    <button className="md: mt-8 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-white font-bold text-gray-950 md:w-auto md:px-8 lg:mt-8">
                       View Live Site
                       <UpArrowRight className="size-4" />
                     </button>
                   </a>
                 </div>
 
-                <Image
-                  className="-mb-4 mt-8 md:-mb-1 lg:w-1/2 lg:flex-1"
-                  src={project.image}
-                  alt={project.title + "-" + project.year}
-                />
+                <div className="-mb-4 mt-8 md:-mb-1 lg:relative lg:mt-0">
+                  <Image
+                    className="lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                    src={project.image}
+                    alt={project.title + "-" + project.year}
+                  />
+                </div>
               </div>
             </div>
           ))}
