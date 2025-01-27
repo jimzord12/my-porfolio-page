@@ -3,7 +3,7 @@ import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
-import GrainBG from "@/components/GrainBG";
+import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
 import Image from "next/image";
 
@@ -42,27 +42,38 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-    <div className="pb-96">
+    <div className="mt-16 pb-72 lg:mt-32">
       <div className="container">
         <SectionHeader
           eyebrow="Happy Clients"
-          title="What Clients Say..."
-          description="Don't take my word for it. See what they have to say about my work."
+          title="What Clients Say about Me"
+          description="Don't just take my word for it. See what my clients have to say about my work."
         />
-      </div>
-      <div>
-        {testimonials.map((t) => (
-          <div
-            key={t.name}
-            className="relative -z-20 overflow-hidden rounded-3xl bg-gray-800 p-6"
-          >
-            <GrainBG />
-            <Image src={t.avatar} alt={t.name} />
-            <div>{t.name}</div>
-            <div>{t.position}</div>
-            <p>{t.text}</p>
+        <div className="mt-16 flex overflow-x-clip p-1 [mask-image:linear-gradient(to_right,transparent,black_25%,black_90%,transparent)] lg:mt-24">
+          <div className="flex flex-none gap-8">
+            {testimonials.map((t) => (
+              <Card
+                key={t.name}
+                className="max-w-xs py-5 md:max-w-md md:px-5 md:py-8 md:pb-12 lg:px-8"
+              >
+                <div className="inline-flex items-center gap-4">
+                  <div className="size-14 shrink-0 content-center rounded-full bg-gray-600/50">
+                    <Image src={t.avatar} alt={t.name} className="max-h-full" />
+                  </div>
+                  <div>
+                    <div className="">{t.name}</div>
+                    <div className="secondary-text-color text-sm font-light">
+                      {t.position}
+                    </div>
+                  </div>
+                </div>
+                <p className="mt-4 text-sm font-light md:mt-4 md:text-base">
+                  {t.text}
+                </p>
+              </Card>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

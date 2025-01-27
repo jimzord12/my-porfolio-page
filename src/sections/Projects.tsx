@@ -2,10 +2,10 @@ import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import Image from "next/image";
-import GrainBG from "@/components/GrainBG";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import UpArrowRight from "@/assets/icons/arrow-up-right.svg";
 import SectionHeader from "@/components/SectionHeader";
+import Card from "@/components/Card";
 
 const portfolioProjects = [
   {
@@ -48,7 +48,7 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:mx-auto lg:max-w-5xl lg:py-24">
+    <section className="pb-16 lg:mx-auto lg:mb-8 lg:max-w-5xl lg:py-24">
       <div className="container">
         <SectionHeader
           eyebrow="Real-world Results"
@@ -57,22 +57,20 @@ export const ProjectsSection = () => {
         />
 
         {/* Cards */}
-        <div className="mt-10 flex flex-col gap-[81.5px] md:mt-[82px]">
+        <div className="mt-10 flex flex-col gap-20 md:mt-20">
           {portfolioProjects.map((project, idx) => (
-            <div
+            <Card
               key={`${project.title}-${idx}`}
-              className="relative z-0 overflow-hidden rounded-3xl bg-gray-400/10 px-8 pt-8 outline outline-2 outline-slate-400/30 md:px-10 md:pt-12 lg:px-20 lg:pt-16"
+              className="md:px-10 md:pt-12 lg:gap-16 lg:px-20 lg:pb-0 lg:pt-16"
             >
-              <GrainBG />
-
               <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-16">
-                <div className="lg:pb-16">
+                <section className="lg:pb-16">
                   <div className="gradient-text inline-flex gap-2 text-sm font-extrabold uppercase tracking-widest">
                     <span>{project.company}</span>
                     <span>&bull;</span>
                     <span>{project.year}</span>
                   </div>
-                  <h3 className="mt-2 font-serif text-2xl md:mt-4 md:text-4xl">
+                  <h3 className="mt-2 font-serif text-2xl md:mt-4 md:text-4xl lg:text-wrap">
                     {project.title}
                   </h3>
                   <hr className="border-y- mt-4 opacity-10 md:mt-5" />
@@ -94,17 +92,17 @@ export const ProjectsSection = () => {
                       <UpArrowRight className="size-4" />
                     </button>
                   </a>
-                </div>
+                </section>
 
-                <div className="-mb-4 mt-8 md:-mb-1 lg:relative lg:mt-0">
+                <section className="-mb-12 mt-8 md:-mb-8 lg:relative lg:-mb-0 lg:-mt-0">
                   <Image
                     className="lg:absolute lg:h-full lg:w-auto lg:max-w-none"
                     src={project.image}
                     alt={project.title + "-" + project.year}
                   />
-                </div>
+                </section>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
