@@ -42,7 +42,7 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-    <div className="mt-16 pb-72 lg:mt-32">
+    <div className="mt-16 lg:mt-32">
       <div className="container">
         <SectionHeader
           eyebrow="Happy Clients"
