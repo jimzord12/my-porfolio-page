@@ -1,17 +1,17 @@
-import StarIcon from "@/assets/icons/star.svg";
+import StarIcon from '@/assets/icons/star.svg';
 
 const words = [
-  "Performant",
-  "Accessible",
-  "Secure",
-  "Interactive",
-  "Scalable",
-  "User Friendly",
-  "Responsive",
-  "Maintainable",
-  "Search Optimized",
-  "Usable",
-  "Reliable",
+  'Performant',
+  'Accessible',
+  'Secure',
+  'Interactive',
+  'Scalable',
+  'User Friendly',
+  'Responsive',
+  'Maintainable',
+  'Search Optimized',
+  'Usable',
+  'Reliable',
 ];
 
 // const hash = async (data: string) => {
@@ -37,17 +37,17 @@ export const TapeSection = () => {
   // }, []);
 
   return (
-    <div className="py-16">
-      <div className="gradient-bg -mx-1 -rotate-3">
-        <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-          <div className="flex flex-none gap-4 py-3">
+    <div className='py-16'>
+      <div className='gradient-bg -mx-1 -rotate-3'>
+        <div className='tape-mask-edges flex'>
+          <div className='flex flex-none gap-4 py-3'>
             {words.map((word) => (
               <div
                 key={word}
-                className="inline-flex items-center gap-4 text-sm font-extrabold uppercase text-black"
+                className='inline-flex items-center gap-4 text-sm font-extrabold uppercase text-black'
               >
                 <span>{word}</span>
-                <StarIcon className="size-6 -rotate-12" />
+                <StarIcon className='size-6 -rotate-12' />
               </div>
             ))}
           </div>

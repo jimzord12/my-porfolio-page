@@ -30,6 +30,9 @@
   .gradient-bg {
     @apply bg-gradient-to-r from-green-400 to-sky-500;
   }
+  .tape-mask-edges {
+    @apply [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)];
+  }
 }
 
 @layer utilities {
