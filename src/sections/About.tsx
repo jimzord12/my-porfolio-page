@@ -69,7 +69,7 @@ const hobbies = [
 
 export const AboutSection = () => {
   return (
-    <div className='mt-36 pb-96 lg:py-16'>
+    <div className='mt-36 lg:py-16'>
       <div className='container'>
         <SectionHeader
           eyebrow='About Me'
@@ -79,7 +79,7 @@ export const AboutSection = () => {
         <div className='mt-20 flex flex-col gap-8'>
           {/*  */}
           {/* My Reads */}
-          <div className='md:grid md:grid-cols-5 md:gap-8 lg:grid-cols-3'>
+          <div className='flex flex-col gap-8 md:grid md:grid-cols-5 lg:grid-cols-3'>
             <Card className='h-[320px] px-6 py-7 md:col-span-2 lg:col-span-1'>
               <CardHeader
                 title='My Reads'
@@ -109,7 +109,7 @@ export const AboutSection = () => {
           </div>
           {/*  */}
           {/* Beyond the Code */}
-          <div className='md:grid md:grid-cols-5 md:gap-8 lg:md:grid-cols-3'>
+          <div className='flex flex-col gap-8 md:grid md:grid-cols-5 lg:md:grid-cols-3'>
             <Card className='flex h-[320px] flex-col p-0 md:col-span-3 lg:col-span-2'>
               <CardHeader
                 title='Beyond the Code'
