@@ -20,7 +20,7 @@ const Button = ({
     <a href={link} className=''>
       <button
         className={twMerge(
-          'mt-8 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-white font-bold text-gray-950 md:w-auto md:px-8 lg:mt-8',
+          'mt-8 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-white p-4 px-6 font-bold text-gray-950 md:w-auto md:px-8 lg:mt-8',
           className,
         )}
       >

@@ -8,7 +8,7 @@ import GrainBG from '@/components/GrainBG';
 
 export const HeroSection = () => {
   return (
-    <div className='relative z-0 py-32 md:py-48 lg:py-60'>
+    <div className='relative z-0 py-32 md:py-48 lg:py-60' id='hero-section'>
       <div className='absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]'>
         {/* Background Grain Image to make the Rings look good */}
         <GrainBG />
