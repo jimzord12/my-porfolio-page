@@ -31,11 +31,32 @@ const config: Config = {
       },
       animation: {
         wiggle: 'wiggle 0.5s ease-in-out infinite',
+        'ping-slow': 'ping 2s ease-in-out infinite',
+        'ping-large': 'ping-large 2s cubic-bezier(0, 0, 0.2, 1) infinite',
+        'move-left': 'move-left 30s linear infinite',
       },
       keyframes: {
         wiggle: {
           '0%, 100%': { transform: 'rotate(-6deg)' },
           '50%': { transform: 'rotate(6deg)' },
+        },
+        'ping-large': {
+          '0%, 100%': {
+            transform: 'scale(3)',
+            opacity: '0',
+          },
+          '50%': {
+            transform: 'scale(1)',
+            opacity: '100%',
+          },
+        },
+        'move-left': {
+          '0%': {
+            transform: 'translateX(0%)',
+          },
+          '100%': {
+            transform: 'translateX(-50%)',
+          },
         },
       },
       boxShadow: {

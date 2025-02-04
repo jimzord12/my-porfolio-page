@@ -9,7 +9,7 @@ import GrainBG from '@/components/GrainBG';
 export const HeroSection = () => {
   return (
     <div className='relative z-0 py-32 md:py-48 lg:py-60' id='hero-section'>
-      <div className='absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]'>
+      <div className='absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]'>
         {/* Background Grain Image to make the Rings look good */}
         <GrainBG />
 
@@ -20,37 +20,48 @@ export const HeroSection = () => {
         <div className='hero-glow-ring size-[1220px]' />
 
         {/* Stars */}
-        <HeroOrbit size={800} rotation={-72}>
+        <HeroOrbit
+          size={800}
+          rotation={-72}
+          spinDurationSec='120s'
+          selfSpinDurationSec='20s'
+        >
           <StarIcon className='size-28 text-green-400' />
         </HeroOrbit>
-        <HeroOrbit size={550} rotation={20}>
+        <HeroOrbit
+          size={550}
+          rotation={20}
+          spinDurationSec='85s'
+          selfSpinDurationSec='10s'
+        >
           <StarIcon className='size-12 text-green-400' />
         </HeroOrbit>
-        <HeroOrbit size={590} rotation={98}>
+        <HeroOrbit size={590} rotation={98} spinDurationSec='75s'>
           <StarIcon className='size-8 text-green-400' />
         </HeroOrbit>
+
         {/* Sparkles */}
-        <HeroOrbit size={430} rotation={-14}>
-          <SparkleIcon className='size-8 opacity-25' />
+        <HeroOrbit size={710} rotation={144} spinDurationSec='90s'>
+          <SparkleIcon className='size-14 opacity-25' />
         </HeroOrbit>
-        <HeroOrbit size={430} rotation={79}>
-          <SparkleIcon className='size-5 opacity-25' />
-        </HeroOrbit>
-        <HeroOrbit size={530} rotation={178}>
+        <HeroOrbit size={530} rotation={178} spinDurationSec='80s'>
           <SparkleIcon className='size-10 opacity-25' />
         </HeroOrbit>
-        <HeroOrbit size={710} rotation={144}>
-          <SparkleIcon className='size-14 opacity-25' />
+        <HeroOrbit size={430} rotation={-14} spinDurationSec='72s'>
+          <SparkleIcon className='size-8 opacity-25' />
+        </HeroOrbit>
+        <HeroOrbit size={430} rotation={79} spinDurationSec='65s'>
+          <SparkleIcon className='size-5 opacity-25' />
         </HeroOrbit>
 
         {/* Circles */}
-        <HeroOrbit size={720} rotation={85}>
+        <HeroOrbit size={720} rotation={85} shouldSpin={false}>
           <div className='size-3 rounded-full bg-emerald-300/25' />
         </HeroOrbit>
-        <HeroOrbit size={520} rotation={-41}>
+        <HeroOrbit size={520} rotation={-41} shouldSpin={false}>
           <div className='size-2 rounded-full bg-emerald-300/25' />
         </HeroOrbit>
-        <HeroOrbit size={650} rotation={-5}>
+        <HeroOrbit size={650} rotation={-5} shouldSpin={false}>
           <div className='size-3 rounded-full bg-emerald-300/25' />
         </HeroOrbit>
       </div>
@@ -61,7 +72,9 @@ export const HeroSection = () => {
         </div>
         <div>
           <div className='inline-flex items-center gap-4 rounded-lg border border-gray-800 bg-slate-950 px-4 py-1.5 text-sm'>
-            <span className='size-2.5 rounded-full bg-green-500' />
+            <div className='relative size-2.5 rounded-full bg-green-500'>
+              <div className='animate-ping-large absolute inset-0 size-2.5 rounded-full bg-green-500' />
+            </div>
             <span className='text-sm font-medium'>
               Available for new projects
             </span>

@@ -1,27 +1,54 @@
-import React, { PropsWithChildren } from "react";
+import clsx from 'clsx';
+import React, { PropsWithChildren } from 'react';
 
 const HeroOrbit = ({
   children,
   size,
   rotation,
-}: PropsWithChildren<{ size: number; rotation: number }>) => {
+  spinDurationSec = '60s',
+  selfSpinDurationSec = '20s',
+  shouldSpin = true,
+  spinDelaySec = '0s',
+}: PropsWithChildren<{
+  size: number;
+  rotation: number;
+  selfSpinDurationSec?: string;
+  spinDurationSec?: string;
+  spinDelaySec?: string;
+  shouldSpin?: boolean;
+}>) => {
   return (
-    <div className="center-abs-obj absolute">
+    <div className='center-abs-obj absolute'>
       <div
-        className="flex items-start justify-start"
+        className={clsx(shouldSpin && 'animate-spin')}
         style={{
-          height: `${size}px`,
-          width: `${size}px`,
-          transform: `rotate(${rotation}deg)`,
+          animationDuration: spinDurationSec,
+          animationDelay: spinDelaySec,
         }}
       >
         <div
-          className="inline-flex"
+          className='flex items-start justify-start'
           style={{
-            transform: `rotate(${rotation * -1}deg)`,
+            height: `${size}px`,
+            width: `${size}px`,
+            transform: `rotate(${rotation}deg)`,
           }}
         >
-          {children}
+          <div
+            className='inline-flex'
+            style={{
+              transform: `rotate(${rotation * -1}deg)`,
+            }}
+          >
+            <div
+              className='animate-spin'
+              style={{
+                animationDuration: selfSpinDurationSec,
+              }}
+            >
+              {children}
+            </div>
+          </div>
         </div>
       </div>
     </div>
