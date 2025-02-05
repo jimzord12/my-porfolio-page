@@ -6,6 +6,7 @@ import UpArrowRight from '@/assets/icons/arrow-up-right.svg';
 import SectionHeader from '@/components/SectionHeader';
 import Card from '@/components/Card';
 import GitHubIcon from '@/assets/icons/techLogos/github.svg';
+import Link from 'next/link';
 
 const portfolioProjects = [
   {
@@ -19,7 +20,9 @@ const portfolioProjects = [
         title: 'Performant (web workers, code splitting, memoization and more)',
       },
     ],
-    link: 'https://youtu.be/4k7IdSLxh6w',
+    link: 'https://genera-game-v3-new-graphics.vercel.app/',
+    github:
+      'https://github.com/jimzord12/Card-Game-Isolated-Testing/tree/main/card-game-isolated-testing',
     image: darkSaasLandingPage,
   },
   {
@@ -29,23 +32,26 @@ const portfolioProjects = [
     results: [
       { title: 'Captivating User Interface' },
       { title: 'Seamless Blockchain Interactions' },
-      { title: 'Increased brand awareness by 15%' },
+      { title: 'Microservices Interactions' },
     ],
-    link: 'https://youtu.be/7hi5zwO75yc',
+    link: 'https://genera-rewarding-tool.netlify.app/rewards-page#available-rewards-section',
+    github:
+      'https://github.com/jimzord12/RewardingTool-Frontend-Deploy/tree/final_version',
     image: lightSaasLandingPage,
   },
-  // {
-  //   company: 'Quantum Dynamics',
-  //   year: '2023',
-  //   title: 'AI Startup Landing Page',
-  //   results: [
-  //     { title: 'Enhanced user experience by 40%' },
-  //     { title: 'Improved site speed by 50%' },
-  //     { title: 'Increased mobile traffic by 35%' },
-  //   ],
-  //   link: 'https://youtu.be/Z7I5uSRHMHg',
-  //   image: aiStartupLandingPage,
-  // },
+  {
+    company: 'UNIWA - LCIIS',
+    year: '2024',
+    title: 'Social Web3 Forum',
+    results: [
+      { title: 'Simply & Intuitive UI' },
+      { title: 'Built by extending a WordPress site' },
+      { title: 'All the Content was personally created' },
+    ],
+    link: 'https://life-genera.eu/social-forum-v2/',
+    github: 'https://github.com/jimzord12/SocialForum-WP-Frontend-Deploy',
+    image: lightSaasLandingPage,
+  },
 ];
 
 export const ProjectsSection = () => {
@@ -93,13 +99,21 @@ export const ProjectsSection = () => {
                   </ul>
 
                   <div className='mt-8 flex items-center justify-between md:justify-start md:gap-8'>
-                    <a href={project.link}>
+                    <a
+                      href={project.link}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
                       <button className='inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-white px-6 font-bold text-gray-950 md:w-auto md:px-8'>
                         View Live Site
                         <UpArrowRight className='size-4' />
                       </button>
                     </a>
-                    <GitHubIcon className='size-12 min-w-10 rounded-md border bg-white p-1.5 text-gray-950 transition-all duration-500 hover:invert' />
+                    <Link href={project.github} passHref legacyBehavior>
+                      <a target='_blank' rel='noopener noreferrer'>
+                        <GitHubIcon className='size-12 min-w-10 rounded-xl border bg-white p-1.5 text-gray-950 transition-all duration-500 hover:invert' />
+                      </a>
+                    </Link>
                   </div>
                 </section>
 
