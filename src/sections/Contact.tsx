@@ -4,8 +4,8 @@ import GrainBG from '@/components/GrainBG';
 
 export const ContactSection = () => {
   return (
-    <div className='container mt-32'>
-      <div className='relative z-0 overflow-hidden rounded-3xl px-8 py-8 text-black md:px-10'>
+    <div className='container mt-32' id='contact'>
+      <div className='relative z-10 overflow-hidden rounded-3xl px-8 py-8 text-black md:px-10'>
         <GrainBG />
         <div className='gradient-bg absolute inset-0 -z-20'></div>
         <div className='flex flex-col items-center justify-center md:flex-row md:gap-24'>
@@ -26,7 +26,7 @@ export const ContactSection = () => {
             Contact Me
           </Button> */}
           <Button
-            className='min-w-max border border-gray-900 bg-gray-950 font-semibold text-white md:mt-0 md:px-6 lg:mt-0'
+            className='min-w-max border border-gray-900 bg-gray-950 font-semibold text-white transition-all duration-500 hover:shadow-md hover:shadow-red-600 hover:invert md:mt-0 md:px-6 lg:mt-0'
             icon={UpArrowRight}
           >
             Contact Me

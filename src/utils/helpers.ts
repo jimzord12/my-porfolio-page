@@ -1,5 +1,5 @@
-import { twMerge } from "tailwind-merge";
-import clsx from "clsx";
+import { twMerge } from 'tailwind-merge';
+import clsx from 'clsx';
 
 /**
  * Combines `clsx` and `twMerge` to handle dynamic and merged Tailwind classes.
@@ -9,4 +9,12 @@ import clsx from "clsx";
  */
 export function cn(...classes: string[]): string {
   return twMerge(clsx(...classes));
+}
+
+export function duplicateItemsBy<T>(array: T[], num: number = 2): T[] {
+  let newArr: T[] = [];
+  for (let i = 0; i < num; i++) {
+    newArr = [...newArr, ...array];
+  }
+  return newArr;
 }

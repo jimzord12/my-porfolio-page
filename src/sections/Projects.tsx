@@ -1,55 +1,57 @@
 import darkSaasLandingPage from '@/assets/images/dark-saas-landing-page.png';
 import lightSaasLandingPage from '@/assets/images/light-saas-landing-page.png';
-import aiStartupLandingPage from '@/assets/images/ai-startup-landing-page.png';
 import Image from 'next/image';
 import CheckIcon from '@/assets/icons/check-circle.svg';
 import UpArrowRight from '@/assets/icons/arrow-up-right.svg';
 import SectionHeader from '@/components/SectionHeader';
 import Card from '@/components/Card';
+import GitHubIcon from '@/assets/icons/techLogos/github.svg';
 
 const portfolioProjects = [
   {
-    company: 'Acme Corp',
-    year: '2022',
-    title: 'Dark Saas Landing Page',
+    company: 'UNIWA - LCIIS',
+    year: '2022 - 2024',
+    title: 'Online Web3 Game',
     results: [
-      { title: 'Enhanced user experience by 40%' },
-      { title: 'Improved site speed by 50%' },
-      { title: 'Increased mobile traffic by 35%' },
+      { title: '4.5/5 Rating from 268 Users' },
+      { title: 'User-friendly & Responsive UI' },
+      {
+        title: 'Performant (web workers, code splitting, memoization and more)',
+      },
     ],
     link: 'https://youtu.be/4k7IdSLxh6w',
     image: darkSaasLandingPage,
   },
   {
-    company: 'Innovative Co',
-    year: '2021',
-    title: 'Light Saas Landing Page',
+    company: 'UNIWA - LCIIS',
+    year: '2023 - 2024',
+    title: 'Rewarding Tool',
     results: [
-      { title: 'Boosted sales by 20%' },
-      { title: 'Expanded customer reach by 35%' },
+      { title: 'Captivating User Interface' },
+      { title: 'Seamless Blockchain Interactions' },
       { title: 'Increased brand awareness by 15%' },
     ],
     link: 'https://youtu.be/7hi5zwO75yc',
     image: lightSaasLandingPage,
   },
-  {
-    company: 'Quantum Dynamics',
-    year: '2023',
-    title: 'AI Startup Landing Page',
-    results: [
-      { title: 'Enhanced user experience by 40%' },
-      { title: 'Improved site speed by 50%' },
-      { title: 'Increased mobile traffic by 35%' },
-    ],
-    link: 'https://youtu.be/Z7I5uSRHMHg',
-    image: aiStartupLandingPage,
-  },
+  // {
+  //   company: 'Quantum Dynamics',
+  //   year: '2023',
+  //   title: 'AI Startup Landing Page',
+  //   results: [
+  //     { title: 'Enhanced user experience by 40%' },
+  //     { title: 'Improved site speed by 50%' },
+  //     { title: 'Increased mobile traffic by 35%' },
+  //   ],
+  //   link: 'https://youtu.be/Z7I5uSRHMHg',
+  //   image: aiStartupLandingPage,
+  // },
 ];
 
 export const ProjectsSection = () => {
   return (
     <section className='pb-16 lg:mx-auto lg:mb-8 lg:max-w-5xl lg:py-24'>
-      <div className='container'>
+      <div className='container' id='projects'>
         <SectionHeader
           eyebrow='Real-world Results'
           title='Featured Projects'
@@ -61,7 +63,7 @@ export const ProjectsSection = () => {
             <Card
               key={`${project.title}-${idx}`}
               className={
-                'sticky md:px-10 md:pt-12 lg:gap-16 lg:px-20 lg:pb-0 lg:pt-16'
+                'shadow-intense-layered sticky md:px-10 md:pt-12 lg:gap-16 lg:px-20 lg:pb-0 lg:pt-16'
               }
               style={{
                 top: 64 + idx * 30,
@@ -84,18 +86,21 @@ export const ProjectsSection = () => {
                         key={`${result.title}-${idx}`}
                         className='secondary-text-color inline-flex items-center gap-2 text-sm md:text-base'
                       >
-                        <CheckIcon className='size-5 md:size-6' />
+                        <CheckIcon className='size-5 shrink-0 md:size-6' />
                         <span>{result.title}</span>
                       </li>
                     ))}
                   </ul>
 
-                  <a href={project.link}>
-                    <button className='md: mt-8 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-white font-bold text-gray-950 md:w-auto md:px-8 lg:mt-8'>
-                      View Live Site
-                      <UpArrowRight className='size-4' />
-                    </button>
-                  </a>
+                  <div className='mt-8 flex items-center justify-between md:justify-start md:gap-8'>
+                    <a href={project.link}>
+                      <button className='inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-white px-6 font-bold text-gray-950 md:w-auto md:px-8'>
+                        View Live Site
+                        <UpArrowRight className='size-4' />
+                      </button>
+                    </a>
+                    <GitHubIcon className='size-12 min-w-10 rounded-md border bg-white p-1.5 text-gray-950 transition-all duration-500 hover:invert' />
+                  </div>
                 </section>
 
                 <section className='-mb-12 mt-8 md:-mb-8 lg:relative lg:-mb-0 lg:-mt-0'>

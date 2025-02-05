@@ -6,7 +6,7 @@ import { MouseEventHandler, useState } from 'react';
 type Section = 'home' | 'projects' | 'about' | 'contact';
 
 export const Header = () => {
-  const [selectedSection, setSelectedSection] = useState<Section>('contact');
+  const [selectedSection, setSelectedSection] = useState<Section>('home');
 
   const handleClick: MouseEventHandler<HTMLAnchorElement> = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -30,7 +30,7 @@ export const Header = () => {
             'nav-item',
             selectedSection === 'home' ? 'selected-nav-item' : '',
           )}
-          href='#hero-section'
+          href='#hero'
           title='home'
           onClick={handleClick}
         >
@@ -41,7 +41,7 @@ export const Header = () => {
             'nav-item',
             selectedSection === 'projects' ? 'selected-nav-item' : '',
           )}
-          href='#'
+          href='#projects'
           title='projects'
           onClick={handleClick}
         >
@@ -52,7 +52,7 @@ export const Header = () => {
             'nav-item',
             selectedSection === 'about' ? 'selected-nav-item' : '',
           )}
-          href='#'
+          href='#about'
           title='about'
           onClick={handleClick}
         >
@@ -63,7 +63,7 @@ export const Header = () => {
             'nav-item',
             selectedSection === 'contact' ? 'selected-nav-item' : '',
           )}
-          href='#'
+          href='#contact'
           title='contact'
           onClick={handleClick}
         >

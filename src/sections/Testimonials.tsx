@@ -1,8 +1,15 @@
-import memojiAvatar1 from '@/assets/images/memoji-avatar-1.png';
-import memojiAvatar2 from '@/assets/images/memoji-avatar-2.png';
-import memojiAvatar3 from '@/assets/images/memoji-avatar-3.png';
-import memojiAvatar4 from '@/assets/images/memoji-avatar-4.png';
-import memojiAvatar5 from '@/assets/images/memoji-avatar-5.png';
+// import memojiAvatar1 from '@/assets/images/memoji-avatar-1.png';
+// import memojiAvatar2 from '@/assets/images/memoji-avatar-2.png';
+// import memojiAvatar3 from '@/assets/images/memoji-avatar-3.png';
+// import memojiAvatar4 from '@/assets/images/memoji-avatar-4.png';
+// import memojiAvatar5 from '@/assets/images/memoji-avatar-5.png';
+import {
+  ashort,
+  kogias,
+  koukouli,
+  leligkou,
+  xevgenis,
+} from '@/assets/images/uniwaTeam';
 import Card from '@/components/Card';
 import SectionHeader from '@/components/SectionHeader';
 import Image from 'next/image';
@@ -10,34 +17,34 @@ import { Fragment } from 'react';
 
 const testimonials = [
   {
-    name: 'Alex Turner',
-    position: 'Marketing Manager @ TechStartups',
-    text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
-    avatar: memojiAvatar1,
+    name: 'Eleni Aikaterini Leligkou',
+    position: 'Project Manager @ LCIIS Lab',
+    text: 'Dimitris has been an essential part of our team, leading the development of our Web3 platform. His expertise in Next.js, React, and blockchain technologies has helped us build a scalable and user-friendly ecosystem for the GENERA project.',
+    avatar: leligkou,
   },
   {
-    name: 'Olivia Green',
-    position: 'Head of Design @ GreenLeaf',
-    text: 'Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.',
-    avatar: memojiAvatar2,
+    name: 'Dimitrios Kogias',
+    position: 'Team Leader @ LCIIS Lab',
+    text: "Dimitris's full-stack expertise has been instrumental in bringing our vision to life. Over the past two years, he has successfully developed and deployed multiple decentralized applications, showcasing his deep knowledge of Web3 and backend systems.",
+    avatar: kogias,
   },
   {
-    name: 'Daniel White',
-    position: 'CEO @ InnovateCo',
-    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
-    avatar: memojiAvatar3,
+    name: 'Andrew Ronald',
+    position: 'Senior Backend Developer & Researcher @ LCIIS Lab',
+    text: 'Dimitris has a strong ability to integrate blockchain technology with modern web development. His work on the Online Web3 Education Game and the Rewarding Tool has provided an engaging and seamless user experience, making the GENERA project a success.',
+    avatar: ashort,
   },
   {
-    name: 'Emily Carter',
-    position: 'Product Manager @ GlobalTech',
-    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
-    avatar: memojiAvatar4,
+    name: 'Maria Koukouli',
+    position: 'Project Manager Assistant @ LCIIS Lab',
+    text: "Dimitris's attention to detail and problem-solving skills have been crucial in the development of our decentralized applications. His work on the Social Forum and its integration with WordPress has helped foster a strong online community for our project.",
+    avatar: koukouli,
   },
   {
-    name: 'Michael Brown',
-    position: 'Director of IT @ MegaCorp',
-    text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
-    avatar: memojiAvatar5,
+    name: 'Michael Xevgenis',
+    position: 'Senior Cloud DevOps & Researcher @ LCIIS Lab',
+    text: 'Dimitris is not only an exceptional full-stack developer but also a proactive team player. His ability to work across multiple technologies, from React to Docker, has ensured the smooth deployment and scalability of our Web3 platform.',
+    avatar: xevgenis,
   },
 ];
 
@@ -52,7 +59,7 @@ export const TestimonialsSection = () => {
         />
         <div className='-my-4 mt-12 flex overflow-x-clip p-1 py-4 [mask-image:linear-gradient(to_right,transparent,black_25%,black_90%,transparent)] lg:mt-20'>
           <div
-            className='animate-move-left flex flex-none snap-x snap-proximity gap-8 pr-8 hover:[animation-play-state:paused]'
+            className='flex flex-none animate-move-left snap-x snap-proximity gap-8 pr-8 hover:[animation-play-state:paused]'
             style={{ animationDuration: '60s' }}
           >
             {[

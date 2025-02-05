@@ -1,5 +1,5 @@
 import StarIcon from '@/assets/icons/star.svg';
-import { Fragment } from 'react';
+import { duplicateItemsBy } from '@/utils/helpers';
 
 const words = [
   'Performant',
@@ -41,22 +41,16 @@ export const TapeSection = () => {
     <div className='py-16'>
       <div className='gradient-bg -mx-1 -rotate-3'>
         <div className='tape-mask-edges flex'>
-          <div className='animate-move-left flex flex-none gap-4 py-3 pr-4'>
-            {[
-              ...new Array(2).fill(0).map((_, index) => (
-                <Fragment key={`tape-arr-${index}`}>
-                  {words.map((word) => (
-                    <div
-                      key={word}
-                      className='inline-flex items-center gap-4 text-sm font-extrabold uppercase text-black'
-                    >
-                      <span>{word}</span>
-                      <StarIcon className='size-6 -rotate-12' />
-                    </div>
-                  ))}
-                </Fragment>
-              )),
-            ]}
+          <div className='flex flex-none animate-move-left gap-4 py-3 pr-4'>
+            {duplicateItemsBy(words, 2).map((word, idx) => (
+              <div
+                key={`${word}-${idx}`}
+                className='inline-flex items-center gap-4 text-sm font-extrabold uppercase text-black'
+              >
+                <span>{word}</span>
+                <StarIcon className='size-6 -rotate-12' />
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,25 +1,55 @@
+'use client';
+
 import Card from '@/components/Card';
 import SectionHeader from '@/components/SectionHeader';
 import bookImage from '@/assets/images/book-cover.png';
 import Image from 'next/image';
-import JavascriptIcon from '@/assets/icons/square-js.svg';
-import HTMLIcon from '@/assets/icons/html5.svg';
-import CssIcon from '@/assets/icons/css3.svg';
-import ReactIcon from '@/assets/icons/react.svg';
-import ChromeIcon from '@/assets/icons/chrome.svg';
-import GithubIcon from '@/assets/icons/github.svg';
+import {
+  BootstrapIcon,
+  CssIcon,
+  ChromeIcon,
+  DockerIcon,
+  EthereumIcom,
+  ExpressIcon,
+  GitHubIcon,
+  JavascriptIcon,
+  NextjsIcon,
+  OpenAIIcon,
+  ReactIcon,
+  StorybookIcon,
+  TailwindcssIcon,
+  TypescriptIcon,
+  ViteIcon,
+  HTMLIcon,
+} from '@/assets/icons/techLogos';
 import mapImage from '@/assets/images/map.png';
 import smileMemoji from '@/assets/images/memoji-smile.png';
 import CardHeader from '@/components/CardHeader';
 import ToolBoxItems from '@/components/ToolBoxItems';
+import { motion } from 'motion/react';
+import { useRef, useState } from 'react';
+import { cn } from '@/utils/helpers';
 
-const toolboxItems = [
+const toolboxItemsTop = [
   { title: 'JavaScript', iconType: JavascriptIcon },
   { title: 'HTML5', iconType: HTMLIcon },
   { title: 'CSS3', iconType: CssIcon },
   { title: 'React', iconType: ReactIcon },
   { title: 'Chrome', iconType: ChromeIcon },
-  { title: 'GitHub', iconType: GithubIcon },
+  { title: 'GitHub', iconType: GitHubIcon },
+  { title: 'Storybook', iconType: StorybookIcon },
+  { title: 'TailwindCSS', iconType: TailwindcssIcon },
+];
+
+const toolboxItemsBottom = [
+  { title: 'Bootstrap', iconType: BootstrapIcon },
+  { title: 'Docker', iconType: DockerIcon },
+  { title: 'Ethereum', iconType: EthereumIcom },
+  { title: 'Express', iconType: ExpressIcon },
+  { title: 'Nextjs', iconType: NextjsIcon },
+  { title: 'OpenAI', iconType: OpenAIIcon },
+  { title: 'Typescript', iconType: TypescriptIcon },
+  { title: 'Vite', iconType: ViteIcon },
 ];
 
 const hobbies = [
@@ -68,9 +98,11 @@ const hobbies = [
 ];
 
 export const AboutSection = () => {
+  const constraitRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
   return (
     <div className='mt-36 lg:py-16'>
-      <div className='container'>
+      <div className='container' id='about'>
         <SectionHeader
           eyebrow='About Me'
           title='A Glimpse Into My World'
@@ -86,7 +118,7 @@ export const AboutSection = () => {
                 description='Explore the books shaping my perspectives.'
               />
 
-              <div className='mx-auto mt-8 w-40'>
+              <div className='mx-auto mt-8 w-40 transition-transform duration-500 hover:rotate-45 hover:scale-125'>
                 <Image src={bookImage} alt='Book Cover' />
               </div>
             </Card>
@@ -100,10 +132,15 @@ export const AboutSection = () => {
                 className='px-6 pt-6'
               />
 
-              <ToolBoxItems items={toolboxItems} className='mt-6' />
               <ToolBoxItems
-                items={[...toolboxItems].reverse()}
+                items={toolboxItemsTop}
                 className='mt-6'
+                moveDirection='right'
+              />
+              <ToolBoxItems
+                items={toolboxItemsBottom}
+                className='mt-6'
+                moveDirection='left'
               />
             </Card>
           </div>
@@ -116,11 +153,18 @@ export const AboutSection = () => {
                 description='Explore my interests and hobbies beyond the digital realm.'
                 className='px-6 py-6'
               />
-              <div className='relative flex-1'>
+              <div className='relative flex-1' ref={constraitRef}>
                 {hobbies.map((hobby) => (
-                  <div
+                  <motion.div
                     key={hobby.title}
-                    className='gradient-bg absolute inline-flex w-fit items-center justify-center gap-2 rounded-full px-6 py-1'
+                    className={cn(
+                      'gradient-bg absolute inline-flex w-fit items-center justify-center gap-2 rounded-full px-6 py-1',
+                      isDragging ? 'cursor-grabbing' : 'cursor-grab',
+                    )}
+                    drag
+                    dragConstraints={constraitRef}
+                    onPointerDown={() => setIsDragging(true)} // Detects when the user starts dragging
+                    onPointerUp={() => setIsDragging(false)} // Resets when the user releases the drag
                     style={{
                       top: hobby.top,
                       left: hobby.left,
@@ -130,7 +174,7 @@ export const AboutSection = () => {
                       {hobby.title}
                     </span>
                     <span className='text-xl'>{hobby.emoji}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </Card>
@@ -142,7 +186,10 @@ export const AboutSection = () => {
                 alt='My Alley'
                 className='h-full w-full object-cover object-left-top'
               />
-              <div className='gradient-bg center-abs-obj absolute rounded-full border-4 border-sky-600/75'>
+              <div className='center-abs-obj absolute'>
+                <div className='gradient-bg h-16 w-16 animate-ping-large rounded-full border-2 border-sky-600/75' />
+              </div>
+              <div className='gradient-bg center-abs-obj absolute rounded-full border-2 border-sky-600/75'>
                 <Image
                   src={smileMemoji}
                   alt='My Memoji'

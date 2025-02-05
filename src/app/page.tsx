@@ -9,7 +9,7 @@ import { Footer } from '@/sections/Footer';
 
 export default function Home() {
   return (
-    <div className='overflow-clip'>
+    <div className='select-none overflow-clip'>
       <Header />
       <HeroSection />
       {/* <div className='sticky top-0 h-56 w-full bg-red-600'></div> */}

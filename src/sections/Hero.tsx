@@ -1,14 +1,16 @@
 import Image from 'next/image';
-import memojiImage from '@/assets/images/memoji-computer.png';
+// import memojiImage from '@/assets/images/memoji-computer.png';
+import mySelfImage from '@/assets/images/final-version-porfolio-hero.png';
 import ArrowDown from '@/assets/icons/arrow-down.svg';
 import StarIcon from '@/assets/icons/star.svg';
 import HeroOrbit from '@/components/HeroOrbit';
 import SparkleIcon from '@/assets/icons/sparkle.svg';
 import GrainBG from '@/components/GrainBG';
+import Link from 'next/link';
 
 export const HeroSection = () => {
   return (
-    <div className='relative z-0 py-32 md:py-48 lg:py-60' id='hero-section'>
+    <div className='relative z-0 py-32 md:py-48 lg:py-60' id='hero'>
       <div className='absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]'>
         {/* Background Grain Image to make the Rings look good */}
         <GrainBG />
@@ -67,13 +69,19 @@ export const HeroSection = () => {
       </div>
 
       <div className='container mx-auto flex flex-col items-center'>
-        <div className='flex flex-col items-center'>
-          <Image src={memojiImage} alt='Me' width={100} height={100} />
+        <div className='z-10 flex translate-y-8 flex-col items-center'>
+          <Image
+            src={mySelfImage}
+            alt='Me'
+            width={200}
+            height={200}
+            className='rounded-full border-2'
+          />
         </div>
-        <div>
+        <div className='z-20'>
           <div className='inline-flex items-center gap-4 rounded-lg border border-gray-800 bg-slate-950 px-4 py-1.5 text-sm'>
             <div className='relative size-2.5 rounded-full bg-green-500'>
-              <div className='animate-ping-large absolute inset-0 size-2.5 rounded-full bg-green-500' />
+              <div className='absolute inset-0 size-2.5 animate-ping-large rounded-full bg-green-500' />
             </div>
             <span className='text-sm font-medium'>
               Available for new projects
@@ -96,16 +104,20 @@ export const HeroSection = () => {
           </div>
 
           <div className='mt-[32.5px] flex flex-col items-center gap-4 md:flex-row md:justify-center'>
-            <button className='inline-flex h-12 items-center gap-2 rounded-xl border border-white/20 px-6'>
-              <span>Explore My Work</span>
-              <ArrowDown className='size-4' />
-            </button>
-            <button className='group inline-flex h-12 items-center gap-2 rounded-xl bg-white px-6'>
-              <span className='text-xl group-hover:animate-wiggle'>👋</span>
-              <span className='font-bold text-gray-900'>
-                Let&apos;s Connect
-              </span>
-            </button>
+            <Link href='#projects'>
+              <button className='group inline-flex h-12 items-center gap-2 rounded-xl border border-white/20 px-6 transition-colors hover:bg-slate-500/50'>
+                <span>Explore My Work</span>
+                <ArrowDown className='size-4 group-hover:animate-bounce' />
+              </button>
+            </Link>
+            <Link href='#contact'>
+              <button className='hover:shadow-intense-inset group inline-flex h-12 items-center gap-2 rounded-xl bg-white px-6 transition-shadow duration-300'>
+                <span className='text-xl group-hover:animate-wiggle'>👋</span>
+                <span className='font-bold text-gray-900'>
+                  Let&apos;s Connect
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
       </div>
