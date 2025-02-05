@@ -2,6 +2,11 @@ import Button from '@/components/Button';
 import UpArrowRight from '@/assets/icons/arrow-up-right.svg';
 import GrainBG from '@/components/GrainBG';
 
+const myGmail = 'jimzordgtx@gmail.com';
+const subject = 'Intresting Project Offer!';
+const body = `Greetings Jim, I have an teresting project that I would like to discuss with you. Best Regards, [Your Name]`;
+const fullUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${myGmail}&su=${subject}&body=${body}`;
+
 export const ContactSection = () => {
   return (
     <div className='container mt-32' id='contact'>
@@ -19,15 +24,11 @@ export const ContactSection = () => {
             </p>
           </div>
 
-          {/* <Button
-            className='min-w-44 bg-gray-950 font-semibold text-white md:mt-0 md:w-40 md:min-w-min md:px-0'
-            icon={UpArrowRight}
-          >
-            Contact Me
-          </Button> */}
           <Button
             className='min-w-max border border-gray-900 bg-gray-950 font-semibold text-white transition-all duration-500 hover:shadow-md hover:shadow-red-600 hover:invert md:mt-0 md:px-6 lg:mt-0'
             icon={UpArrowRight}
+            link={fullUrl}
+            target='_blank'
           >
             Contact Me
           </Button>

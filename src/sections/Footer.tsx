@@ -4,19 +4,19 @@ const currentYear = new Date().getFullYear();
 const footerLinks = [
   {
     title: 'YouTube',
-    href: '#',
+    href: 'https://www.youtube.com/@jimzordstam6338',
   },
-  {
-    title: 'Twitter',
-    href: '#',
-  },
-  {
-    title: 'Instagram',
-    href: '#',
-  },
+  // {
+  //   title: 'Twitter',
+  //   href: '#',
+  // },
+  // {
+  //   title: 'Instagram',
+  //   href: '#',
+  // },
   {
     title: 'LinkedIn',
-    href: '#',
+    href: 'https://www.linkedin.com/in/dstamatakis96/',
   },
 ];
 export const Footer = () => {
@@ -31,7 +31,7 @@ export const Footer = () => {
           <div className='mt-8 md:mt-0'>
             <nav className='flex flex-col gap-8 md:flex-row'>
               {footerLinks.map(({ title, href }) => (
-                <a key={title} href={href} className=''>
+                <a key={title} href={href} target='_blank' rel='noreferrer'>
                   <div className='inline-flex items-center gap-1.5 hover:underline'>
                     <span className=''>{title}</span>
                     <ArrowUpRightIcon className='size-4' />
