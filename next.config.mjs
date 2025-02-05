@@ -14,7 +14,11 @@
 // };
 
 const nextConfig = {
-  output: 'export', // Enables static export
+  output: 'export', // Enables static export !UNCOMMENT FOR STATIC EXPORT ⚠️
+  basePath: '/my-porfolio-page', // Replace with your GitHub repository name
+  assetPrefix: '/my-porfolio-page', // Ensures correct asset paths
+  trailingSlash: true, // Ensures proper routing
+
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
