@@ -8,7 +8,7 @@ import SparkleIcon from '@/assets/icons/sparkle.svg';
 import GrainBG from '@/components/GrainBG';
 import Link from 'next/link';
 
-export const HeroSection = () => {
+const HeroSection = () => {
   return (
     <div className='relative z-0 py-32 md:py-48 lg:py-60' id='hero'>
       <div className='absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]'>
@@ -111,7 +111,7 @@ export const HeroSection = () => {
               </button>
             </Link>
             <Link href='#contact'>
-              <button className='hover:shadow-intense-inset group inline-flex h-12 items-center gap-2 rounded-xl bg-white px-6 transition-shadow duration-300'>
+              <button className='group inline-flex h-12 items-center gap-2 rounded-xl bg-white px-6 transition-shadow duration-300 hover:shadow-intense-inset'>
                 <span className='text-xl group-hover:animate-wiggle'>👋</span>
                 <span className='font-bold text-gray-900'>
                   Let&apos;s Connect
@@ -124,3 +124,5 @@ export const HeroSection = () => {
     </div>
   );
 };
+
+export default HeroSection;

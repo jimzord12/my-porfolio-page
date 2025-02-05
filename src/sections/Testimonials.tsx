@@ -1,8 +1,3 @@
-// import memojiAvatar1 from '@/assets/images/memoji-avatar-1.png';
-// import memojiAvatar2 from '@/assets/images/memoji-avatar-2.png';
-// import memojiAvatar3 from '@/assets/images/memoji-avatar-3.png';
-// import memojiAvatar4 from '@/assets/images/memoji-avatar-4.png';
-// import memojiAvatar5 from '@/assets/images/memoji-avatar-5.png';
 import {
   ashort,
   kogias,
@@ -48,7 +43,7 @@ const testimonials = [
   },
 ];
 
-export const TestimonialsSection = () => {
+const TestimonialsSection = () => {
   return (
     <div className='mt-16 lg:mt-32'>
       <div className=''>
@@ -99,3 +94,5 @@ export const TestimonialsSection = () => {
     </div>
   );
 };
+
+export default TestimonialsSection;

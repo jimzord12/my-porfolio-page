@@ -5,7 +5,7 @@ import { MouseEventHandler, useState } from 'react';
 
 type Section = 'home' | 'projects' | 'about' | 'contact';
 
-export const Header = () => {
+const Header = () => {
   const [selectedSection, setSelectedSection] = useState<Section>('home');
 
   const handleClick: MouseEventHandler<HTMLAnchorElement> = (
@@ -73,3 +73,5 @@ export const Header = () => {
     </div>
   );
 };
+
+export default Header;

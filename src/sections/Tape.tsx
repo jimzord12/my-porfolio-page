@@ -15,28 +15,7 @@ const words = [
   'Reliable',
 ];
 
-// const hash = async (data: string) => {
-//   const encoder = new TextEncoder();
-//   const encodedData = encoder.encode(data);
-
-//   const hashBuffer = await crypto.subtle.digest("SHA-256", encodedData);
-
-//   return Array.from(new Uint8Array(hashBuffer))
-//     .map((byte) => byte.toString(16).padStart(2, "0"))
-//     .join("");
-// };
-
-export const TapeSection = () => {
-  // const [hashes, setHashes] = useState<string[] | null>(null);
-
-  // useEffect(() => {
-  //   const computeHashes = async () => {
-  //     const hashedWords = await Promise.all(words.map((word) => hash(word)));
-  //     setHashes(hashedWords);
-  //   };
-  //   computeHashes();
-  // }, []);
-
+const TapeSection = () => {
   return (
     <div className='py-16'>
       <div className='gradient-bg -mx-1 -rotate-3'>
@@ -57,3 +36,5 @@ export const TapeSection = () => {
     </div>
   );
 };
+
+export default TapeSection;

@@ -22,7 +22,7 @@ const ToolBoxItems = ({ items, className, moveDirection }: Props) => {
         className={clsx(
           'flex flex-none gap-6 py-0.5 pr-6',
           moveDirection === 'right'
-            ? 'animate-move-right '
+            ? 'animate-move-right'
             : 'animate-move-left',
         )}
       >

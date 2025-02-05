@@ -19,7 +19,7 @@ const footerLinks = [
     href: 'https://www.linkedin.com/in/dstamatakis96/',
   },
 ];
-export const Footer = () => {
+const Footer = () => {
   return (
     <footer className='relative z-0 mt-16 overflow-x-clip'>
       <div className='container'>
@@ -48,3 +48,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;

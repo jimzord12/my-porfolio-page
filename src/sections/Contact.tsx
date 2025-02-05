@@ -7,7 +7,7 @@ const subject = 'Intresting Project Offer!';
 const body = `Greetings Jim, I have an teresting project that I would like to discuss with you. Best Regards, [Your Name]`;
 const fullUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${myGmail}&su=${subject}&body=${body}`;
 
-export const ContactSection = () => {
+const ContactSection = () => {
   return (
     <div className='container mt-32' id='contact'>
       <div className='relative z-10 overflow-hidden rounded-3xl px-8 py-8 text-black md:px-10'>
@@ -37,3 +37,5 @@ export const ContactSection = () => {
     </div>
   );
 };
+
+export default ContactSection;

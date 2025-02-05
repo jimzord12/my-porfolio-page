@@ -97,7 +97,7 @@ const hobbies = [
   },
 ];
 
-export const AboutSection = () => {
+const AboutSection = () => {
   const constraitRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   return (
@@ -208,3 +208,5 @@ export const AboutSection = () => {
     </div>
   );
 };
+
+export default AboutSection;
