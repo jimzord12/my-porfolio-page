@@ -1,5 +1,3 @@
-import darkSaasLandingPage from '@/assets/images/dark-saas-landing-page.png';
-import lightSaasLandingPage from '@/assets/images/light-saas-landing-page.png';
 import Image from 'next/image';
 import CheckIcon from '@/assets/icons/check-circle.svg';
 import UpArrowRight from '@/assets/icons/arrow-up-right.svg';
@@ -7,6 +5,11 @@ import SectionHeader from '@/components/SectionHeader';
 import Card from '@/components/Card';
 import GitHubIcon from '@/assets/icons/techLogos/github.svg';
 import Link from 'next/link';
+import {
+  GeneraGame,
+  GeneraRewardingTool,
+  GeneraSocialForum,
+} from '@/assets/images/myApps';
 
 const portfolioProjects = [
   {
@@ -23,7 +26,7 @@ const portfolioProjects = [
     link: 'https://genera-game-v3-new-graphics.vercel.app/',
     github:
       'https://github.com/jimzord12/Card-Game-Isolated-Testing/tree/main/card-game-isolated-testing',
-    image: darkSaasLandingPage,
+    image: GeneraGame,
   },
   {
     company: 'UNIWA - LCIIS',
@@ -37,7 +40,7 @@ const portfolioProjects = [
     link: 'https://genera-rewarding-tool.netlify.app/rewards-page#available-rewards-section',
     github:
       'https://github.com/jimzord12/RewardingTool-Frontend-Deploy/tree/final_version',
-    image: lightSaasLandingPage,
+    image: GeneraRewardingTool,
   },
   {
     company: 'UNIWA - LCIIS',
@@ -50,7 +53,7 @@ const portfolioProjects = [
     ],
     link: 'https://life-genera.eu/social-forum-v2/',
     github: 'https://github.com/jimzord12/SocialForum-WP-Frontend-Deploy',
-    image: lightSaasLandingPage,
+    image: GeneraSocialForum,
   },
 ];
 

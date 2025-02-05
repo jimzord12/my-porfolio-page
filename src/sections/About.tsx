@@ -22,7 +22,7 @@ import {
   ViteIcon,
   HTMLIcon,
 } from '@/assets/icons/techLogos';
-import mapImage from '@/assets/images/map.png';
+import mapImage from '@/assets/images/myMap.webp';
 import smileMemoji from '@/assets/images/memoji-smile.png';
 import CardHeader from '@/components/CardHeader';
 import ToolBoxItems from '@/components/ToolBoxItems';
@@ -184,7 +184,7 @@ export const AboutSection = () => {
               <Image
                 src={mapImage}
                 alt='My Alley'
-                className='h-full w-full object-cover object-left-top'
+                className='h-full w-full object-cover object-center'
               />
               <div className='center-abs-obj absolute'>
                 <div className='gradient-bg h-16 w-16 animate-ping-large rounded-full border-2 border-sky-600/75' />
@@ -195,6 +195,11 @@ export const AboutSection = () => {
                   alt='My Memoji'
                   className='size-20 object-contain'
                 />
+              </div>
+              <div className='absolute inset-x-0 bottom-2 flex justify-center gap-4'>
+                <span className='gradient-bg inline-flex w-fit items-center justify-center gap-2 rounded-full px-2 py-1 text-sm shadow-lg shadow-black/60'>
+                  Greece, Athens
+                </span>
               </div>
             </Card>
           </div>
