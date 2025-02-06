@@ -15,8 +15,8 @@
 
 const nextConfig = {
   output: 'export', // Enables static export !UNCOMMENT FOR STATIC EXPORT ⚠️
-  basePath: '/my-porfolio-page', // Replace with your GitHub repository name
-  assetPrefix: '/my-porfolio-page', // Ensures correct asset paths
+  // basePath: '/my-porfolio-page', // Replace with your GitHub repository name
+  // assetPrefix: '/my-porfolio-page', // Ensures correct asset paths
   trailingSlash: true, // Ensures proper routing
   images: {
     unoptimized: true, // ✅ Disables Next.js Image Optimization for static exports

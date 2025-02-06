@@ -19,24 +19,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Dimitris Stamatakis - Full-Stack Web3 Developer',
     description: 'Showcasing my portfolio as a Full-Stack Web3 Developer.',
-    url: 'https://yourportfolio.com',
+    url: 'https://dim-stamatakis.dev',
     siteName: 'Dimitris Stamatakis Portfolio',
     images: [
       {
-        url: 'https://yourportfolio.com/og-image.jpg',
+        url: 'https://dim-stamatakis.dev/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Dimitris Stamatakis Portfolio',
       },
     ],
     type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Dimitris Stamatakis - Full-Stack Web3 Developer',
-    description:
-      'Building high-quality Web3 applications with Next.js, React, and Node.js.',
-    images: ['https://yourportfolio.com/twitter-image.jpg'],
   },
 };
 
