@@ -16,6 +16,7 @@ Assess: OWASP Top 10, secrets in code/logs, authentication, authorization, depen
 Analyze: happy path coverage, edge cases, error handling, boundary conditions, regression gaps.
 
 **Skip the fan-out only when ALL THREE conditions hold:**
+
 - ≤ 2 files touched
 - < 50 lines changed
 - No auth, payment, data access, or config modifications
@@ -44,6 +45,7 @@ Produce a unified output:
 **Acknowledged Risks** — Known issues with accepted mitigations
 
 **Rollback Procedure:**
+
 - Trigger condition: [what signals a bad deploy]
 - Rollback steps: [exact commands]
 - Recovery time objective: [how long it should take]

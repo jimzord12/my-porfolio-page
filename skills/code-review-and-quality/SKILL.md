@@ -11,30 +11,35 @@ when-to-use: Before merging any non-trivial change. Invoked via /review.
 ## Five-Axis Framework
 
 ### 1. Correctness
+
 - Does the implementation meet the spec and acceptance criteria?
 - Are edge cases and error paths handled?
 - Do tests fail without the change and pass with it?
 - Are tests meaningful (not just superficially passing)?
 
 ### 2. Readability & Simplicity
+
 - Can another engineer understand this without explanation?
 - Are names clear and descriptive?
 - Is control flow as simple as possible?
 - Does the structure reveal intent?
 
 ### 3. Architecture
+
 - Is this consistent with existing patterns in the codebase?
 - Are boundaries clean (no feature logic in shared modules)?
 - Does this reduce complexity or relocate it?
 - Is there duplication that should be consolidated?
 
 ### 4. Security
+
 - Is all external input validated at system boundaries?
 - Are secrets absent from code and logs?
 - Are auth checks present where required?
 - Is output encoded to prevent injection?
 
 ### 5. Performance
+
 - Any N+1 query patterns?
 - Any unbounded loops or missing pagination?
 - Any unnecessary synchronous operations?
@@ -55,12 +60,12 @@ Target ~100 lines changed per review. Up to 300 is acceptable for a single logic
 
 ## Severity Labels
 
-| Label | Meaning |
-|-------|---------|
-| **Critical** | Blocks merge. Security vulnerability or data integrity risk. |
+| Label        | Meaning                                                        |
+| ------------ | -------------------------------------------------------------- |
+| **Critical** | Blocks merge. Security vulnerability or data integrity risk.   |
 | **Required** | Must address before merge. Missing tests, broken architecture. |
-| **Consider** | Optional improvement. Worth discussing, not blocking. |
-| **FYI** | Observation only. No action required. |
+| **Consider** | Optional improvement. Worth discussing, not blocking.          |
+| **FYI**      | Observation only. No action required.                          |
 
 ## Red Flags
 

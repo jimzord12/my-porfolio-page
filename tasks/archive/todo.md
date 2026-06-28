@@ -9,6 +9,7 @@
 **Files Affected:** `.editorconfig`
 
 **Acceptance Criteria:**
+
 - File exists with rules for indent style (spaces, 2), charset (utf-8), EOL (lf), trailing newline.
 - Rules applied to TS/TSX, JSON, YAML, and Markdown separately.
 
@@ -25,6 +26,7 @@
 **Files Affected:** `.prettierrc`, `.prettierignore`
 
 **Acceptance Criteria:**
+
 - `.prettierrc` activates `prettier-plugin-tailwindcss`.
 - `npx prettier --check src/` exits 0 (or lists files to fix).
 - `.prettierignore` excludes `node_modules`, `.next`, `docs`, `public`.
@@ -42,6 +44,7 @@
 **Files Affected:** `eslint.config.mjs`, `package.json`
 
 **Acceptance Criteria:**
+
 - `npm run lint` passes.
 - Adding a dummy unused import triggers an ESLint error.
 - Prettier formatting conflicts do not appear as ESLint errors.
@@ -59,6 +62,7 @@
 **Files Affected:** `vitest.config.ts`, `package.json`, `src/utils/helpers.test.ts`
 
 **Acceptance Criteria:**
+
 - `npm test` runs and passes.
 - `npm run test:coverage` generates a coverage report.
 - The `cn()` helper test exercises both the merging and conditional class logic.
@@ -76,6 +80,7 @@
 **Files Affected:** `package.json`, `.husky/pre-commit`
 
 **Acceptance Criteria:**
+
 - `git commit` triggers the pre-commit hook.
 - Staging a file with a lint error blocks the commit and shows the error.
 - Staging a correctly formatted file commits successfully.
@@ -97,6 +102,7 @@ Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `ci`, `perf`
 **Files Affected:** `commitlint.config.ts`, `.husky/commit-msg`, `package.json`
 
 **Acceptance Criteria:**
+
 - `git commit -m "bad message"` is rejected with a helpful error.
 - `git commit -m "feat: add dark mode"` is accepted.
 
@@ -113,6 +119,7 @@ Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `ci`, `perf`
 **Files Affected:** `.github/workflows/ci.yml`
 
 **Acceptance Criteria:**
+
 - Workflow file is valid YAML and passes `actionlint` (or GitHub's schema check).
 - All steps are named clearly.
 - Node version matches `package.json` engines (or latest LTS, 20.x).

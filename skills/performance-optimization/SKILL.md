@@ -20,11 +20,11 @@ Don't optimize before you have evidence of a problem. Premature optimization add
 
 ## Targets
 
-| Metric | Good | Needs Work |
-|--------|------|------------|
-| LCP | ≤ 2.5s | > 4.0s |
-| INP | ≤ 200ms | > 500ms |
-| CLS | ≤ 0.1 | > 0.25 |
+| Metric | Good    | Needs Work |
+| ------ | ------- | ---------- |
+| LCP    | ≤ 2.5s  | > 4.0s     |
+| INP    | ≤ 200ms | > 500ms    |
+| CLS    | ≤ 0.1   | > 0.25     |
 
 ## Common Issues and Fixes
 

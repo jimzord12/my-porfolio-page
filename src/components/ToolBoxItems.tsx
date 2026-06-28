@@ -1,8 +1,6 @@
 import React, { ElementType } from 'react';
 import TechIcon from './TechIcon';
-import { twMerge } from 'tailwind-merge';
-import { duplicateItemsBy } from '@/utils/helpers';
-import clsx from 'clsx';
+import { cn, duplicateItemsBy } from '@/utils/helpers';
 
 type ToolboxItem = {
   title: string;
@@ -17,13 +15,11 @@ type Props = {
 
 const ToolBoxItems = ({ items, className, moveDirection }: Props) => {
   return (
-    <div className={twMerge('tape-mask-edges flex', className)}>
+    <div className={cn('tape-mask-edges flex', className)}>
       <div
-        className={clsx(
+        className={cn(
           'flex flex-none gap-6 py-0.5 pr-6',
-          moveDirection === 'right'
-            ? 'animate-move-right'
-            : 'animate-move-left',
+          moveDirection === 'right' ? 'animate-move-right' : 'animate-move-left'
         )}
       >
         {duplicateItemsBy(items).map((tool, idx) => (

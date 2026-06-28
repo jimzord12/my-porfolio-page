@@ -14,10 +14,7 @@ const TechIcon = (props: Props) => {
           <stop offset='100%' stopColor='rgb(14 165 233)' />
         </linearGradient>
       </svg>
-      <Component
-        className='size-10'
-        style={{ fill: 'url(#tech-icon-gradient)' }}
-      />
+      <Component className='size-10' style={{ fill: 'url(#tech-icon-gradient)' }} />
     </>
   );
 };

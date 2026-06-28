@@ -21,11 +21,11 @@ Never fix a bug without first proving it exists via a failing test.
 
 ## Test Pyramid
 
-| Level | Share | When |
-|-------|-------|------|
-| Unit | ~80% | Pure logic, utilities, isolated functions |
-| Integration | ~15% | Boundary crossings, component interactions |
-| E2E | ~5% | Critical user flows only |
+| Level       | Share | When                                       |
+| ----------- | ----- | ------------------------------------------ |
+| Unit        | ~80%  | Pure logic, utilities, isolated functions  |
+| Integration | ~15%  | Boundary crossings, component interactions |
+| E2E         | ~5%   | Critical user flows only                   |
 
 ## Quality Standards
 

@@ -73,15 +73,16 @@ A task is done when **all** of the following are true:
 
 Issues are the single source of truth for work to be done.
 
-| Operation | Command |
-|---|---|
-| List open | `gh issue list` |
-| View issue | `gh issue view <number>` |
-| Create | `gh issue create --title "..." --body "..." --label bug` |
-| Comment | `gh issue comment <number> --body "..."` |
-| Close | `gh issue close <number>` |
+| Operation  | Command                                                  |
+| ---------- | -------------------------------------------------------- |
+| List open  | `gh issue list`                                          |
+| View issue | `gh issue view <number>`                                 |
+| Create     | `gh issue create --title "..." --body "..." --label bug` |
+| Comment    | `gh issue comment <number> --body "..."`                 |
+| Close      | `gh issue close <number>`                                |
 
 **Labels in use:**
+
 - `bug` — correctness or validity problem
 - `enhancement` — improvement or new feature
 - `documentation` — docs-only change

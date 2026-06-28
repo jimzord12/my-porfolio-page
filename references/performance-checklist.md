@@ -4,11 +4,11 @@ Quick reference for web performance. Use alongside `skills/performance-optimizat
 
 ## Core Web Vitals Targets
 
-| Metric | Good | Needs Work | Poor |
-|--------|------|------------|------|
-| LCP (Largest Contentful Paint) | ≤ 2.5s | ≤ 4.0s | > 4.0s |
-| INP (Interaction to Next Paint) | ≤ 200ms | ≤ 500ms | > 500ms |
-| CLS (Cumulative Layout Shift) | ≤ 0.1 | ≤ 0.25 | > 0.25 |
+| Metric                          | Good    | Needs Work | Poor    |
+| ------------------------------- | ------- | ---------- | ------- |
+| LCP (Largest Contentful Paint)  | ≤ 2.5s  | ≤ 4.0s     | > 4.0s  |
+| INP (Interaction to Next Paint) | ≤ 200ms | ≤ 500ms    | > 500ms |
+| CLS (Cumulative Layout Shift)   | ≤ 0.1   | ≤ 0.25     | > 0.25  |
 
 ## Images
 
@@ -61,11 +61,11 @@ onCLS(console.log);
 
 ## Common Anti-Patterns
 
-| Anti-Pattern | Impact | Fix |
-|---|---|---|
-| Unoptimized images | Slow LCP, wasted bandwidth | WebP, responsive sizes, explicit dimensions |
-| Large bundles | Slow TTI | Code split, tree shake, audit deps |
-| Blocking main thread | Poor INP | Chunk long tasks, offload to Web Workers |
-| Layout thrashing | CLS, jank | Batch DOM reads then writes |
-| Memory leaks | Growing memory, eventual crash | Clean up listeners, intervals, refs |
-| No lazy loading | Slow initial load | Lazy-load below-fold images and routes |
+| Anti-Pattern         | Impact                         | Fix                                         |
+| -------------------- | ------------------------------ | ------------------------------------------- |
+| Unoptimized images   | Slow LCP, wasted bandwidth     | WebP, responsive sizes, explicit dimensions |
+| Large bundles        | Slow TTI                       | Code split, tree shake, audit deps          |
+| Blocking main thread | Poor INP                       | Chunk long tasks, offload to Web Workers    |
+| Layout thrashing     | CLS, jank                      | Batch DOM reads then writes                 |
+| Memory leaks         | Growing memory, eventual crash | Clean up listeners, intervals, refs         |
+| No lazy loading      | Slow initial load              | Lazy-load below-fold images and routes      |

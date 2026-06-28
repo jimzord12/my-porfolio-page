@@ -24,21 +24,21 @@ No code changes were made in this session. All findings are captured as open iss
 
 ## Open Issues (as of this session)
 
-| # | Title | Label | Priority |
-|---|---|---|---|
-| [#6](https://github.com/jimzord12/my-porfolio-page/issues/6) | `cn()` type signature rejects valid clsx inputs | bug | High |
-| [#7](https://github.com/jimzord12/my-porfolio-page/issues/7) | button inside anchor — invalid HTML | bug | High |
-| [#8](https://github.com/jimzord12/my-porfolio-page/issues/8) | Missing og-image.jpg breaks social previews | bug | High |
-| [#9](https://github.com/jimzord12/my-porfolio-page/issues/9) | AGENTS.md is stale | documentation | High |
-| [#10](https://github.com/jimzord12/my-porfolio-page/issues/10) | Five user-visible typos | bug | Medium |
-| [#11](https://github.com/jimzord12/my-porfolio-page/issues/11) | Header nav ignores scroll | enhancement | Medium |
-| [#12](https://github.com/jimzord12/my-porfolio-page/issues/12) | Standardise on cn() across components | enhancement | Medium |
-| [#13](https://github.com/jimzord12/my-porfolio-page/issues/13) | Invalid Tailwind prefix lg:md: in About.tsx | bug | Medium |
-| [#14](https://github.com/jimzord12/my-porfolio-page/issues/14) | CI missing Prettier format check | enhancement | Medium |
-| [#15](https://github.com/jimzord12/my-porfolio-page/issues/15) | README.md is default Next.js template | documentation | Low |
-| [#16](https://github.com/jimzord12/my-porfolio-page/issues/16) | Dead code in Footer | enhancement | Low |
-| [#17](https://github.com/jimzord12/my-porfolio-page/issues/17) | Archive stale tasks/ planning files | documentation | Low |
-| [#18](https://github.com/jimzord12/my-porfolio-page/issues/18) | Add robots.txt and sitemap.xml | enhancement | Low |
+| #                                                              | Title                                           | Label         | Priority |
+| -------------------------------------------------------------- | ----------------------------------------------- | ------------- | -------- |
+| [#6](https://github.com/jimzord12/my-porfolio-page/issues/6)   | `cn()` type signature rejects valid clsx inputs | bug           | High     |
+| [#7](https://github.com/jimzord12/my-porfolio-page/issues/7)   | button inside anchor — invalid HTML             | bug           | High     |
+| [#8](https://github.com/jimzord12/my-porfolio-page/issues/8)   | Missing og-image.jpg breaks social previews     | bug           | High     |
+| [#9](https://github.com/jimzord12/my-porfolio-page/issues/9)   | AGENTS.md is stale                              | documentation | High     |
+| [#10](https://github.com/jimzord12/my-porfolio-page/issues/10) | Five user-visible typos                         | bug           | Medium   |
+| [#11](https://github.com/jimzord12/my-porfolio-page/issues/11) | Header nav ignores scroll                       | enhancement   | Medium   |
+| [#12](https://github.com/jimzord12/my-porfolio-page/issues/12) | Standardise on cn() across components           | enhancement   | Medium   |
+| [#13](https://github.com/jimzord12/my-porfolio-page/issues/13) | Invalid Tailwind prefix lg:md: in About.tsx     | bug           | Medium   |
+| [#14](https://github.com/jimzord12/my-porfolio-page/issues/14) | CI missing Prettier format check                | enhancement   | Medium   |
+| [#15](https://github.com/jimzord12/my-porfolio-page/issues/15) | README.md is default Next.js template           | documentation | Low      |
+| [#16](https://github.com/jimzord12/my-porfolio-page/issues/16) | Dead code in Footer                             | enhancement   | Low      |
+| [#17](https://github.com/jimzord12/my-porfolio-page/issues/17) | Archive stale tasks/ planning files             | documentation | Low      |
+| [#18](https://github.com/jimzord12/my-porfolio-page/issues/18) | Add robots.txt and sitemap.xml                  | enhancement   | Low      |
 
 ---
 

@@ -22,20 +22,10 @@ const HeroSection = () => {
         <div className='hero-glow-ring size-[1220px]' />
 
         {/* Stars */}
-        <HeroOrbit
-          size={800}
-          rotation={-72}
-          spinDurationSec='120s'
-          selfSpinDurationSec='20s'
-        >
+        <HeroOrbit size={800} rotation={-72} spinDurationSec='120s' selfSpinDurationSec='20s'>
           <StarIcon className='size-28 text-green-400' />
         </HeroOrbit>
-        <HeroOrbit
-          size={550}
-          rotation={20}
-          spinDurationSec='85s'
-          selfSpinDurationSec='10s'
-        >
+        <HeroOrbit size={550} rotation={20} spinDurationSec='85s' selfSpinDurationSec='10s'>
           <StarIcon className='size-12 text-green-400' />
         </HeroOrbit>
         <HeroOrbit size={590} rotation={98} spinDurationSec='75s'>
@@ -83,9 +73,7 @@ const HeroSection = () => {
             <div className='relative size-2.5 rounded-full bg-green-500'>
               <div className='absolute inset-0 size-2.5 animate-ping-large rounded-full bg-green-500' />
             </div>
-            <span className='text-sm font-medium'>
-              Available for new projects
-            </span>
+            <span className='text-sm font-medium'>Available for new projects</span>
           </div>
         </div>
 
@@ -97,9 +85,8 @@ const HeroSection = () => {
               User Experiences
             </h1>
             <p className='text-center text-white/60 md:text-lg'>
-              I specialize in transforming desings into functional,
-              high-performing web applications. Let&apos;s discuss your next
-              project.
+              I specialize in transforming designs into functional, high-performing web
+              applications. Let&apos;s discuss your next project.
             </p>
           </div>
 
@@ -113,9 +100,7 @@ const HeroSection = () => {
             <Link href='#contact'>
               <button className='group inline-flex h-12 items-center gap-2 rounded-xl bg-white px-6 transition-shadow duration-300 hover:shadow-intense-inset'>
                 <span className='text-xl group-hover:animate-wiggle'>👋</span>
-                <span className='font-bold text-gray-900'>
-                  Let&apos;s Connect
-                </span>
+                <span className='font-bold text-gray-900'>Let&apos;s Connect</span>
               </button>
             </Link>
           </div>

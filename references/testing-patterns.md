@@ -33,8 +33,8 @@ describe('TaskService.createTask', () => {
 ## Common Assertions
 
 ```typescript
-expect(result).toBe(expected);           // Strict equality
-expect(result).toEqual(expected);        // Deep equality
+expect(result).toBe(expected); // Strict equality
+expect(result).toEqual(expected); // Deep equality
 expect(result).toBeNull();
 expect(result).toBeDefined();
 expect(array).toHaveLength(3);
@@ -90,11 +90,11 @@ test('user can complete a flow', async ({ page }) => {
 
 ## Anti-Patterns
 
-| Anti-Pattern | Problem | Fix |
-|---|---|---|
-| Testing implementation details | Breaks on refactor | Test inputs/outputs |
-| Snapshot everything | No one reviews diffs | Assert specific values |
-| Shared mutable state | Tests pollute each other | Setup/teardown per test |
-| Testing third-party code | Not your bug | Mock the boundary |
-| Skipping tests to pass CI | Hides real bugs | Fix or delete the test |
-| No async error handling | False passes | Always `await` async tests |
+| Anti-Pattern                   | Problem                  | Fix                        |
+| ------------------------------ | ------------------------ | -------------------------- |
+| Testing implementation details | Breaks on refactor       | Test inputs/outputs        |
+| Snapshot everything            | No one reviews diffs     | Assert specific values     |
+| Shared mutable state           | Tests pollute each other | Setup/teardown per test    |
+| Testing third-party code       | Not your bug             | Mock the boundary          |
+| Skipping tests to pass CI      | Hides real bugs          | Fix or delete the test     |
+| No async error handling        | False passes             | Always `await` async tests |

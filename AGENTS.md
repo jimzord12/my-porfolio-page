@@ -5,15 +5,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev       # Start dev server at localhost:3000
-npm run build     # Static export to /docs (used for GitHub Pages deployment)
-npm run lint      # Run ESLint via next lint
+npm run dev             # Start dev server at localhost:3000
+npm run build           # Static export to /docs (used for GitHub Pages deployment)
+npm run lint            # Run ESLint via next lint
+npm run lint:fix        # Run ESLint with auto-fix
+npm run typecheck       # TypeScript type check (tsc --noEmit)
+npm run format          # Format all files with Prettier
+npm run format:check    # Check formatting without writing
+npm test                # Run Vitest in watch mode
+npm run test:run        # Run Vitest once (CI-friendly)
+npm run test:coverage   # Run Vitest with coverage report
+npm run analyze         # Bundle analyzer (sets ANALYZE=true)
 ```
 
-No test suite is configured. Format code with Prettier before committing:
+Format code with Prettier before committing:
 
 ```bash
-npx prettier --write .
+npm run format
 ```
 
 ## Architecture
@@ -21,6 +29,7 @@ npx prettier --write .
 Single-page portfolio for Dimitris Stamatakis (Full-Stack Web3 Developer). The entire page is assembled in `src/app/page.tsx` by composing section components in order: Header → Hero → Projects → Tape → Testimonials → About → Contact → Footer.
 
 **Directory layout:**
+
 - `src/sections/` — top-level page sections, each a self-contained component
 - `src/components/` — shared primitives (`Card`, `CardHeader`, `SectionHeader`, `Button`, `GrainBG`, `HeroOrbit`, `TechIcon`, `ToolBoxItems`)
 - `src/assets/icons/` — SVG icons (general) and `techLogos/` (tech stack icons with barrel `index.ts`)
@@ -34,11 +43,12 @@ Single-page portfolio for Dimitris Stamatakis (Full-Stack Web3 Developer). The e
 **SVG imports** use `@svgr/webpack` — SVGs are React components by default. Append `?url` to get a URL string instead:
 
 ```ts
-import ArrowDown from '@/assets/icons/arrow-down.svg';   // React component
-import url from '@/assets/icons/arrow-down.svg?url';     // URL string
+import ArrowDown from '@/assets/icons/arrow-down.svg'; // React component
+import url from '@/assets/icons/arrow-down.svg?url'; // URL string
 ```
 
 **Styling** — Tailwind with custom utility classes defined in `src/app/globals.css`:
+
 - `.gradient-text` / `.gradient-bg` — green-400 → sky-500 gradient
 - `.hero-glow-ring` — centered ring with emerald glow shadow
 - `.center-abs-obj` — absolute centering helper

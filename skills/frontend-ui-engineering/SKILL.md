@@ -32,6 +32,7 @@ Is it complex client state with many writers? ───────→ Zustand /
 ## Avoiding "AI Aesthetic" Patterns
 
 Do not default to:
+
 - Monochromatic purple/indigo palettes
 - Excessive or gratuitous gradients (unless they're part of the design system)
 - Uniform rounded corners on everything

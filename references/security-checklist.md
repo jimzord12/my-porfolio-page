@@ -62,10 +62,10 @@ cors({
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-})
+});
 
 // NEVER in production:
-cors({ origin: '*' })
+cors({ origin: '*' });
 ```
 
 ## Data Protection
@@ -107,15 +107,15 @@ res.status(500).json({ error: err.message, stack: err.stack });
 
 ## OWASP Top 10
 
-| # | Vulnerability | Prevention |
-|---|---|---|
-| 1 | Broken Access Control | Auth checks on every endpoint, ownership verification |
-| 2 | Cryptographic Failures | HTTPS, strong hashing, no secrets in code |
-| 3 | Injection | Parameterized queries, input validation |
-| 4 | Insecure Design | Threat modeling, spec-driven development |
-| 5 | Security Misconfiguration | Security headers, minimal permissions, audit deps |
-| 6 | Vulnerable Components | `npm audit`, keep deps updated |
-| 7 | Auth Failures | Strong passwords, rate limiting, session management |
-| 8 | Data Integrity Failures | Verify updates/dependencies, signed artifacts |
-| 9 | Logging Failures | Log security events, don't log secrets |
-| 10 | SSRF | Validate/allowlist URLs, restrict outbound requests |
+| #   | Vulnerability             | Prevention                                            |
+| --- | ------------------------- | ----------------------------------------------------- |
+| 1   | Broken Access Control     | Auth checks on every endpoint, ownership verification |
+| 2   | Cryptographic Failures    | HTTPS, strong hashing, no secrets in code             |
+| 3   | Injection                 | Parameterized queries, input validation               |
+| 4   | Insecure Design           | Threat modeling, spec-driven development              |
+| 5   | Security Misconfiguration | Security headers, minimal permissions, audit deps     |
+| 6   | Vulnerable Components     | `npm audit`, keep deps updated                        |
+| 7   | Auth Failures             | Strong passwords, rate limiting, session management   |
+| 8   | Data Integrity Failures   | Verify updates/dependencies, signed artifacts         |
+| 9   | Logging Failures          | Log security events, don't log secrets                |
+| 10  | SSRF                      | Validate/allowlist URLs, restrict outbound requests   |
