@@ -5,25 +5,9 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 /** @type {import('next').NextConfig} */
-
-// const nextConfig = {
-//   experimental: {
-//     turbo: {
-//       rules: {
-//         "*.svg": {
-//           loaders: ["@svgr/webpack"],
-//           as: "*.js",
-//         },
-//       },
-//     },
-//   },
-// };
-
 const nextConfig = {
-  output: 'export', // Enables static export !UNCOMMENT FOR STATIC EXPORT ⚠️
-  // basePath: '/my-porfolio-page', // Replace with your GitHub repository name
-  // assetPrefix: '/my-porfolio-page', // Ensures correct asset paths
-  trailingSlash: true, // Ensures proper routing
+  output: 'export',
+  trailingSlash: true,
   images: {
     unoptimized: true, // ✅ Disables Next.js Image Optimization for static exports
   },
