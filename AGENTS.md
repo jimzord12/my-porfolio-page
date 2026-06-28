@@ -52,6 +52,12 @@ Use `cn()` from `@/utils/helpers` for conditional Tailwind classes (combines cls
 
 **Animations:** The `motion` package (Motion for React, formerly Framer Motion) is used for drag interactions in `About.tsx` and scroll-based animations. `About.tsx` is a Client Component (`'use client'`) due to hooks and motion usage.
 
+## Browser Support
+
+Target: modern evergreen browsers — Chrome, Firefox, Safari, Edge (latest 2 major versions). No IE or legacy mobile browser support.
+
+**Policy for the `modern-web-guidance` skill:** Baseline Widely Available features need no fallbacks. Baseline Newly Available features may be used if they degrade gracefully with no polyfills. Skip any fallback that requires an external dependency or more than ~20 lines of custom code — redesign the approach instead.
+
 ## Static Export & Deployment
 
 `next.config.mjs` sets `output: 'export'` — `npm run build` writes to `/docs` which is served as GitHub Pages. Next.js Image Optimization is disabled (`unoptimized: true`) because static export doesn't support the image API. Do not use `next/image` features that require a server (blur placeholders from remote URLs, etc.).
