@@ -9,7 +9,7 @@ import {
   CssIcon,
   ChromeIcon,
   DockerIcon,
-  EthereumIcom,
+  EthereumIcon,
   ExpressIcon,
   GitHubIcon,
   JavascriptIcon,
@@ -44,7 +44,7 @@ const toolboxItemsTop = [
 const toolboxItemsBottom = [
   { title: 'Bootstrap', iconType: BootstrapIcon },
   { title: 'Docker', iconType: DockerIcon },
-  { title: 'Ethereum', iconType: EthereumIcom },
+  { title: 'Ethereum', iconType: EthereumIcon },
   { title: 'Express', iconType: ExpressIcon },
   { title: 'Nextjs', iconType: NextjsIcon },
   { title: 'OpenAI', iconType: OpenAIIcon },
@@ -98,7 +98,7 @@ const hobbies = [
 ];
 
 const AboutSection = () => {
-  const constraitRef = useRef(null);
+  const constraintRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   return (
     <div className='mt-36 lg:py-16'>
@@ -127,42 +127,34 @@ const AboutSection = () => {
             <Card className='h-[320px] p-0 md:col-span-3 lg:col-span-2'>
               <CardHeader
                 title='My Toolbox'
-                description='Explore the technologies and tools used to craft expeptional
+                description='Explore the technologies and tools used to craft exceptional
                   digital experiences.'
                 className='px-6 pt-6'
               />
 
-              <ToolBoxItems
-                items={toolboxItemsTop}
-                className='mt-6'
-                moveDirection='right'
-              />
-              <ToolBoxItems
-                items={toolboxItemsBottom}
-                className='mt-6'
-                moveDirection='left'
-              />
+              <ToolBoxItems items={toolboxItemsTop} className='mt-6' moveDirection='right' />
+              <ToolBoxItems items={toolboxItemsBottom} className='mt-6' moveDirection='left' />
             </Card>
           </div>
           {/*  */}
           {/* Beyond the Code */}
-          <div className='flex flex-col gap-8 md:grid md:grid-cols-5 lg:md:grid-cols-3'>
+          <div className='flex flex-col gap-8 md:grid md:grid-cols-5 lg:grid-cols-3'>
             <Card className='flex h-[320px] flex-col p-0 md:col-span-3 lg:col-span-2'>
               <CardHeader
                 title='Beyond the Code'
                 description='Explore my interests and hobbies beyond the digital realm.'
                 className='px-6 py-6'
               />
-              <div className='relative flex-1' ref={constraitRef}>
+              <div className='relative flex-1' ref={constraintRef}>
                 {hobbies.map((hobby) => (
                   <motion.div
                     key={hobby.title}
                     className={cn(
                       'gradient-bg absolute inline-flex w-fit items-center justify-center gap-2 rounded-full px-6 py-1',
-                      isDragging ? 'cursor-grabbing' : 'cursor-grab',
+                      isDragging ? 'cursor-grabbing' : 'cursor-grab'
                     )}
                     drag
-                    dragConstraints={constraitRef}
+                    dragConstraints={constraintRef}
                     onPointerDown={() => setIsDragging(true)} // Detects when the user starts dragging
                     onPointerUp={() => setIsDragging(false)} // Resets when the user releases the drag
                     style={{
@@ -170,9 +162,7 @@ const AboutSection = () => {
                       left: hobby.left,
                     }}
                   >
-                    <span className='font-semibold text-gray-950'>
-                      {hobby.title}
-                    </span>
+                    <span className='font-semibold text-gray-950'>{hobby.title}</span>
                     <span className='text-xl'>{hobby.emoji}</span>
                   </motion.div>
                 ))}
@@ -190,11 +180,7 @@ const AboutSection = () => {
                 <div className='gradient-bg h-16 w-16 animate-ping-large rounded-full border-2 border-sky-600/75' />
               </div>
               <div className='gradient-bg center-abs-obj absolute rounded-full border-2 border-sky-600/75'>
-                <Image
-                  src={smileMemoji}
-                  alt='My Memoji'
-                  className='size-20 object-contain'
-                />
+                <Image src={smileMemoji} alt='My Memoji' className='size-20 object-contain' />
               </div>
               <div className='absolute inset-x-0 bottom-2 flex justify-center gap-4'>
                 <span className='gradient-bg inline-flex w-fit items-center justify-center gap-2 rounded-full px-2 py-1 text-sm shadow-lg shadow-black/60'>

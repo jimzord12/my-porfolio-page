@@ -19,12 +19,13 @@ Before touching anything, understand why the code exists and what invariant it p
 ### Step 2 — Identify Opportunities
 
 Look for:
+
 - Deep nesting → extract to guard clauses or helper functions
 - Long functions doing multiple things → split by responsibility
 - Unclear or generic names → rename to reflect purpose
 - Duplicated logic → consolidate into a shared function
 - Conditional chains that could be a lookup table or map
-- Comments explaining *what* the code does → rename so the code explains itself
+- Comments explaining _what_ the code does → rename so the code explains itself
 
 ### Step 3 — Change Incrementally
 
@@ -33,6 +34,7 @@ Make one improvement at a time. Run tests after each change. If tests fail, reve
 ### Step 4 — Evaluate the Result
 
 After simplification, verify:
+
 - [ ] All existing tests still pass
 - [ ] No error handling was removed
 - [ ] The code follows project conventions

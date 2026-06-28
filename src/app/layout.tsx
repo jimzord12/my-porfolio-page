@@ -14,8 +14,7 @@ export const metadata: Metadata = {
   title: 'Dimitris Stamatakis - Full-Stack Web3 Developer',
   description:
     "I'm a Full-Stack Web3 Developer specializing in Next.js, React, Node.js, and Web3 DApps.",
-  keywords:
-    'Full-Stack Developer, Web3, Next.js, React, TailwindCSS, Blockchain, Smart Contracts',
+  keywords: 'Full-Stack Developer, Web3, Next.js, React, TailwindCSS, Blockchain, Smart Contracts',
   openGraph: {
     title: 'Dimitris Stamatakis - Full-Stack Web3 Developer',
     description: 'Showcasing my portfolio as a Full-Stack Web3 Developer.',
@@ -44,7 +43,7 @@ export default function RootLayout({
         className={twMerge(
           inter.variable,
           calistoga.variable,
-          'bg-gray-900 font-sans text-white antialiased',
+          'bg-gray-900 font-sans text-white antialiased'
         )}
       >
         {children}

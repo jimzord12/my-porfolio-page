@@ -38,14 +38,14 @@ when-to-use: Whenever adding input handling, authentication, external integratio
 
 Before building any new feature, consider each threat category:
 
-| Threat | Question | Mitigation |
-|--------|----------|------------|
-| **S**poofing | Can an attacker pretend to be another user? | Strong auth, session management |
-| **T**ampering | Can data be modified in transit or at rest? | HTTPS, integrity checks |
-| **R**epudiation | Can actions be denied later? | Audit logs |
-| **I**nfo Disclosure | Can sensitive data leak? | Encryption, output encoding, no secrets in logs |
-| **D**oS | Can the service be made unavailable? | Rate limiting, input size limits |
-| **E**levation | Can a user gain higher privileges? | Auth checks on every protected operation |
+| Threat              | Question                                    | Mitigation                                      |
+| ------------------- | ------------------------------------------- | ----------------------------------------------- |
+| **S**poofing        | Can an attacker pretend to be another user? | Strong auth, session management                 |
+| **T**ampering       | Can data be modified in transit or at rest? | HTTPS, integrity checks                         |
+| **R**epudiation     | Can actions be denied later?                | Audit logs                                      |
+| **I**nfo Disclosure | Can sensitive data leak?                    | Encryption, output encoding, no secrets in logs |
+| **D**oS             | Can the service be made unavailable?        | Rate limiting, input size limits                |
+| **E**levation       | Can a user gain higher privileges?          | Auth checks on every protected operation        |
 
 ## AI/LLM Security (If Applicable)
 

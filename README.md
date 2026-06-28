@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dimitris Stamatakis — Portfolio
 
-## Getting Started
+Personal portfolio for Dimitris Stamatakis, Full-Stack Web3 Developer.
 
-First, run the development server:
+**Live site:** https://dim-stamatakis.dev
+
+## Local Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # dev server at http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Command                 | Description                             |
+| ----------------------- | --------------------------------------- |
+| `npm run dev`           | Start dev server at localhost:3000      |
+| `npm run build`         | Static export to `/docs` (GitHub Pages) |
+| `npm run lint`          | Run ESLint                              |
+| `npm run lint:fix`      | Run ESLint with auto-fix                |
+| `npm run typecheck`     | TypeScript type check                   |
+| `npm run format`        | Format all files with Prettier          |
+| `npm run format:check`  | Check formatting without writing        |
+| `npm test`              | Run Vitest in watch mode                |
+| `npm run test:run`      | Run Vitest once                         |
+| `npm run test:coverage` | Run Vitest with coverage report         |
+| `npm run analyze`       | Bundle analyzer (`ANALYZE=true` build)  |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+`npm run build` writes a static export to `/docs`, which is served via GitHub Pages. The project uses `output: 'export'` in `next.config.mjs`.
 
-To learn more about Next.js, take a look at the following resources:
+## Architecture
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The page is assembled in `src/app/page.tsx` by composing section components:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+Header → Hero → Projects → Tape → Testimonials → About → Contact → Footer
+```
 
-## Deploy on Vercel
+- `src/sections/` — top-level page sections
+- `src/components/` — shared primitives (Card, Button, HeroOrbit, etc.)
+- `src/assets/` — SVG icons and images
+- `src/utils/helpers.ts` — `cn()` and `duplicateItemsBy()`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For agent and contributor guidance, see [AGENTS.md](./AGENTS.md).

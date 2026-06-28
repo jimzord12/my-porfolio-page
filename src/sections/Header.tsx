@@ -9,7 +9,7 @@ const Header = () => {
   const [selectedSection, setSelectedSection] = useState<Section>('home');
 
   const handleClick: MouseEventHandler<HTMLAnchorElement> = (
-    e: React.MouseEvent<HTMLAnchorElement>,
+    e: React.MouseEvent<HTMLAnchorElement>
   ) => {
     e.stopPropagation();
     const element = e.target as HTMLAnchorElement;
@@ -26,10 +26,7 @@ const Header = () => {
     <div className='fixed top-3 z-40 flex w-screen items-center justify-center'>
       <nav className='flex justify-center gap-1 rounded-full border border-gray-500 bg-white/10 p-0.5 backdrop-blur-sm'>
         <a
-          className={cn(
-            'nav-item',
-            selectedSection === 'home' ? 'selected-nav-item' : '',
-          )}
+          className={cn('nav-item', selectedSection === 'home' ? 'selected-nav-item' : '')}
           href='#hero'
           title='home'
           onClick={handleClick}
@@ -37,10 +34,7 @@ const Header = () => {
           Home
         </a>
         <a
-          className={cn(
-            'nav-item',
-            selectedSection === 'projects' ? 'selected-nav-item' : '',
-          )}
+          className={cn('nav-item', selectedSection === 'projects' ? 'selected-nav-item' : '')}
           href='#projects'
           title='projects'
           onClick={handleClick}
@@ -48,10 +42,7 @@ const Header = () => {
           Projects
         </a>
         <a
-          className={cn(
-            'nav-item',
-            selectedSection === 'about' ? 'selected-nav-item' : '',
-          )}
+          className={cn('nav-item', selectedSection === 'about' ? 'selected-nav-item' : '')}
           href='#about'
           title='about'
           onClick={handleClick}
@@ -59,10 +50,7 @@ const Header = () => {
           About
         </a>
         <a
-          className={cn(
-            'nav-item',
-            selectedSection === 'contact' ? 'selected-nav-item' : '',
-          )}
+          className={cn('nav-item', selectedSection === 'contact' ? 'selected-nav-item' : '')}
           href='#contact'
           title='contact'
           onClick={handleClick}

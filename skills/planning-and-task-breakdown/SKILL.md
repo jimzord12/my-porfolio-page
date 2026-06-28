@@ -25,6 +25,7 @@ Identify which components depend on which. Build a mental or written dependency 
 Organize tasks as complete end-to-end feature slices, not horizontal layers.
 
 Instead of:
+
 ```
 Task 1: Create all database schemas
 Task 2: Create all API routes
@@ -32,6 +33,7 @@ Task 3: Create all UI components
 ```
 
 Prefer:
+
 ```
 Task 1: Implement "create item" end-to-end (schema + route + UI + test)
 Task 2: Implement "list items" end-to-end
@@ -42,16 +44,17 @@ Task 3: Implement "delete item" end-to-end
 
 Each task must include:
 
-| Field | Required |
-|-------|----------|
-| Description | What specifically gets built |
-| Acceptance Criteria | Concrete, testable conditions for "done" |
-| Verification Steps | Commands or checks that confirm completion |
-| Dependencies | Which tasks must be complete first |
-| Files Affected | Approximate list |
-| Size | S / M / L (see sizing below) |
+| Field               | Required                                   |
+| ------------------- | ------------------------------------------ |
+| Description         | What specifically gets built               |
+| Acceptance Criteria | Concrete, testable conditions for "done"   |
+| Verification Steps  | Commands or checks that confirm completion |
+| Dependencies        | Which tasks must be complete first         |
+| Files Affected      | Approximate list                           |
+| Size                | S / M / L (see sizing below)               |
 
 **Sizing:**
+
 - S — 1–2 files
 - M — 3–4 files
 - L — 5–8 files
@@ -60,6 +63,7 @@ Each task must include:
 ### Step 5 — Add Phase Gates
 
 Insert checkpoints between major phases to verify:
+
 - Tests pass
 - Build succeeds
 - End-to-end behavior works before proceeding to the next phase

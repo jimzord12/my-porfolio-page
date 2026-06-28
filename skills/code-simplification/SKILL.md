@@ -26,14 +26,14 @@ Before touching anything, understand why the code exists. What invariant does it
 
 Target these patterns:
 
-| Pattern | Refactoring |
-|---------|-------------|
-| Deep nesting (3+ levels) | Guard clauses, early returns |
-| Long functions (50+ lines) | Extract by responsibility |
-| Generic or unclear names | Rename to reflect purpose |
-| Duplicated logic | Consolidate into a shared function |
-| Conditional chains | Lookup table or map |
-| Comments explaining *what* | Rename so code explains itself |
+| Pattern                    | Refactoring                        |
+| -------------------------- | ---------------------------------- |
+| Deep nesting (3+ levels)   | Guard clauses, early returns       |
+| Long functions (50+ lines) | Extract by responsibility          |
+| Generic or unclear names   | Rename to reflect purpose          |
+| Duplicated logic           | Consolidate into a shared function |
+| Conditional chains         | Lookup table or map                |
+| Comments explaining _what_ | Rename so code explains itself     |
 
 ### Step 3 — Change Incrementally
 

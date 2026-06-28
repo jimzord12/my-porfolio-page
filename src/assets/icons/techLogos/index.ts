@@ -2,7 +2,7 @@ import BootstrapIcon from './bootstrap-icon.svg';
 import ChromeIcon from './chrome.svg';
 import CssIcon from './css3.svg';
 import DockerIcon from './docker-icon.svg';
-import EthereumIcom from './ethereum-icon.svg';
+import EthereumIcon from './ethereum-icon.svg';
 import ExpressIcon from './express-icon.svg';
 import GitHubIcon from './github.svg';
 import NextjsIcon from './nextjs-icon.svg';
@@ -20,7 +20,7 @@ export {
   ChromeIcon,
   CssIcon,
   DockerIcon,
-  EthereumIcom,
+  EthereumIcon,
   ExpressIcon,
   GitHubIcon,
   NextjsIcon,

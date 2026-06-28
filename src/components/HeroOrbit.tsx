@@ -1,5 +1,5 @@
-import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
+import { cn } from '@/utils/helpers';
 
 const HeroOrbit = ({
   children,
@@ -20,7 +20,7 @@ const HeroOrbit = ({
   return (
     <div className='center-abs-obj absolute'>
       <div
-        className={clsx(shouldSpin && 'animate-spin')}
+        className={cn(shouldSpin && 'animate-spin')}
         style={{
           animationDuration: spinDurationSec,
           animationDelay: spinDelaySec,

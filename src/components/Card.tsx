@@ -1,17 +1,13 @@
 import React, { ComponentPropsWithoutRef } from 'react';
 import GrainBG from './GrainBG';
-import { twMerge } from 'tailwind-merge';
+import { cn } from '@/utils/helpers';
 
-const Card = ({
-  children,
-  className,
-  ...other
-}: ComponentPropsWithoutRef<'div'>) => {
+const Card = ({ children, className, ...other }: ComponentPropsWithoutRef<'div'>) => {
   return (
     <div
-      className={twMerge(
+      className={cn(
         'relative z-0 overflow-hidden rounded-3xl bg-gray-800 p-8 outline outline-2 outline-slate-400/30',
-        className,
+        className
       )}
       {...other}
     >

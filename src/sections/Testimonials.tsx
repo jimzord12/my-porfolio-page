@@ -1,10 +1,4 @@
-import {
-  ashort,
-  kogias,
-  koukouli,
-  leligkou,
-  xevgenis,
-} from '@/assets/images/uniwaTeam';
+import { ashort, kogias, koukouli, leligkou, xevgenis } from '@/assets/images/uniwaTeam';
 import Card from '@/components/Card';
 import SectionHeader from '@/components/SectionHeader';
 import Image from 'next/image';
@@ -67,11 +61,7 @@ const TestimonialsSection = () => {
                     >
                       <div className='inline-flex items-center gap-4'>
                         <div className='size-14 shrink-0 content-center rounded-full bg-gray-600/50'>
-                          <Image
-                            src={t.avatar}
-                            alt={t.name}
-                            className='max-h-full'
-                          />
+                          <Image src={t.avatar} alt={t.name} className='max-h-full' />
                         </div>
                         <div>
                           <div className=''>{t.name}</div>
@@ -80,9 +70,7 @@ const TestimonialsSection = () => {
                           </div>
                         </div>
                       </div>
-                      <p className='mt-4 text-sm font-light md:mt-4 md:text-base'>
-                        {t.text}
-                      </p>
+                      <p className='mt-4 text-sm font-light md:mt-4 md:text-base'>{t.text}</p>
                     </Card>
                   ))}
                 </Fragment>

@@ -3,8 +3,8 @@ import UpArrowRight from '@/assets/icons/arrow-up-right.svg';
 import GrainBG from '@/components/GrainBG';
 
 const myGmail = 'jimzordgtx@gmail.com';
-const subject = 'Intresting Project Offer!';
-const body = `Greetings Jim, I have an teresting project that I would like to discuss with you. Best Regards, [Your Name]`;
+const subject = 'Interesting Project Offer!';
+const body = `Greetings Jim, I have an interesting project that I would like to discuss with you. Best Regards, [Your Name]`;
 const fullUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${myGmail}&su=${subject}&body=${body}`;
 
 const ContactSection = () => {
@@ -19,8 +19,8 @@ const ContactSection = () => {
               Let&apos;s create something amazing together
             </h2>
             <p className='mt-2 text-center text-sm md:text-start md:text-base'>
-              Ready to bring your next project to life? Let&apos;s connect and
-              discuss how I can help you achieve your goals.
+              Ready to bring your next project to life? Let&apos;s connect and discuss how I can
+              help you achieve your goals.
             </p>
           </div>
 

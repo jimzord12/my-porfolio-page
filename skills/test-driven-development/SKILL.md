@@ -31,11 +31,11 @@ Never fix a bug without first proving it exists via a failing test.
 
 ## Test Pyramid
 
-| Level | Share | When to use |
-|-------|-------|-------------|
-| Unit | ~80% | Pure logic, utilities, isolated functions |
-| Integration | ~15% | Boundary crossings, hook behavior, component interactions |
-| E2E | ~5% | Critical user flows only |
+| Level       | Share | When to use                                               |
+| ----------- | ----- | --------------------------------------------------------- |
+| Unit        | ~80%  | Pure logic, utilities, isolated functions                 |
+| Integration | ~15%  | Boundary crossings, hook behavior, component interactions |
+| E2E         | ~5%   | Critical user flows only                                  |
 
 ## Quality Standards
 
@@ -60,6 +60,7 @@ describe('HeroSection', () => {
 ## Browser / UI Testing
 
 For visual or interaction changes:
+
 1. Run unit/component tests
 2. Verify in a real browser
 3. Check console for errors
@@ -78,6 +79,7 @@ For visual or interaction changes:
 ## Note for This Project
 
 This portfolio currently has no test suite configured. When adding tests:
+
 - Install `@testing-library/react` and `@testing-library/jest-dom` for component tests
 - Install `jest` or `vitest` as the test runner
 - Playwright is available in this environment for E2E tests

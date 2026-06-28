@@ -17,11 +17,11 @@ How to move from a GitHub Issue to a closed issue using the skills available in 
 
 Before picking a workflow, size the issue:
 
-| Size | Signal | Examples from open issues |
-|---|---|---|
-| **S** | Single file, < 20 lines, no behaviour change | #10 (typos), #13 (Tailwind prefix), #16 (dead code), #17 (stale files) |
-| **M** | 2–5 files, clear scope, bounded change | #6 (cn type), #7 (button/anchor), #9 (AGENTS.md), #12 (cn consistency), #14 (CI step), #15 (README), #18 (robots/sitemap) |
-| **L** | Multi-file, new behaviour, or unclear requirements | #8 (og-image), #11 (scroll nav) |
+| Size  | Signal                                             | Examples from open issues                                                                                                 |
+| ----- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **S** | Single file, < 20 lines, no behaviour change       | #10 (typos), #13 (Tailwind prefix), #16 (dead code), #17 (stale files)                                                    |
+| **M** | 2–5 files, clear scope, bounded change             | #6 (cn type), #7 (button/anchor), #9 (AGENTS.md), #12 (cn consistency), #14 (CI step), #15 (README), #18 (robots/sitemap) |
+| **L** | Multi-file, new behaviour, or unclear requirements | #8 (og-image), #11 (scroll nav)                                                                                           |
 
 When in doubt, size up.
 
@@ -30,6 +30,7 @@ When in doubt, size up.
 ## Workflows by Size
 
 ### S — Small
+
 > Typos, one-liner fixes, config tweaks, docs-only changes.
 
 ```
@@ -43,6 +44,7 @@ fix → /review → commit (Closes #N) → close issue
 ---
 
 ### M — Medium
+
 > Multi-file bugs, small enhancements, CI or config changes, documentation rewrites.
 
 ```
@@ -57,6 +59,7 @@ fix → /review → commit (Closes #N) → close issue
 ---
 
 ### L — Large
+
 > New behaviour, architectural changes, anything spanning more than 5 files or touching shared components.
 
 ```
@@ -77,27 +80,27 @@ fix → /review → commit (Closes #N) → close issue
 
 These stack on top of the size workflow. Apply as relevant.
 
-| Context | Add this skill | When |
-|---|---|---|
-| Any UI change | `frontend-ui-engineering` skill | Before starting implementation |
-| HTML, CSS, or browser API | `modern-web-guidance` skill | Before starting implementation — web APIs evolve fast |
-| Performance concern | `/webperf` | Run before and after — compare scores |
-| Security-sensitive code | `security-and-hardening` skill | During implementation and in `/review` |
+| Context                   | Add this skill                  | When                                                  |
+| ------------------------- | ------------------------------- | ----------------------------------------------------- |
+| Any UI change             | `frontend-ui-engineering` skill | Before starting implementation                        |
+| HTML, CSS, or browser API | `modern-web-guidance` skill     | Before starting implementation — web APIs evolve fast |
+| Performance concern       | `/webperf`                      | Run before and after — compare scores                 |
+| Security-sensitive code   | `security-and-hardening` skill  | During implementation and in `/review`                |
 
 ---
 
 ## Skill Quick Reference
 
-| Slash Command | What it does | When to reach for it |
-|---|---|---|
-| `/spec` | Writes a structured spec for approval before any code | Ambiguous requirements, new feature, multi-module change |
-| `/plan` | Breaks a spec into ordered, verifiable tasks | After spec is approved, or before any M/L implementation |
-| `/build` | Implements one task at a time in thin vertical slices | During implementation of any planned task |
-| `/test` | TDD cycle — failing test first, then minimal code | Any new behaviour or bug fix with logic changes |
-| `/review` | Five-axis code review (correctness, readability, arch, security, perf) | Before every merge, regardless of size |
-| `/code-simplify` | Reduces complexity without changing behaviour | After implementing, when code feels harder to read than it should |
-| `/ship` | Parallel pre-launch review (3 agents: code, security, perf) | Before merging L issues to `main` |
-| `/webperf` | Performance audit against Lighthouse / CWV data | When perf is a concern or after a significant UI change |
+| Slash Command    | What it does                                                           | When to reach for it                                              |
+| ---------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `/spec`          | Writes a structured spec for approval before any code                  | Ambiguous requirements, new feature, multi-module change          |
+| `/plan`          | Breaks a spec into ordered, verifiable tasks                           | After spec is approved, or before any M/L implementation          |
+| `/build`         | Implements one task at a time in thin vertical slices                  | During implementation of any planned task                         |
+| `/test`          | TDD cycle — failing test first, then minimal code                      | Any new behaviour or bug fix with logic changes                   |
+| `/review`        | Five-axis code review (correctness, readability, arch, security, perf) | Before every merge, regardless of size                            |
+| `/code-simplify` | Reduces complexity without changing behaviour                          | After implementing, when code feels harder to read than it should |
+| `/ship`          | Parallel pre-launch review (3 agents: code, security, perf)            | Before merging L issues to `main`                                 |
+| `/webperf`       | Performance audit against Lighthouse / CWV data                        | When perf is a concern or after a significant UI change           |
 
 ---
 

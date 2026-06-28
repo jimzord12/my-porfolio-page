@@ -62,6 +62,7 @@ Point out problems directly. Explain the concrete downside. Propose an alternati
 ### 4. Enforce Simplicity
 
 Before finishing any implementation, ask:
+
 - Can this be done in fewer lines?
 - Are these abstractions earning their complexity?
 - Would a staff engineer say "why didn't you just..."?
