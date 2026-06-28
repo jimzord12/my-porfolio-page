@@ -1,5 +1,4 @@
 import Image from 'next/image';
-// import memojiImage from '@/assets/images/memoji-computer.png';
 import mySelfImage from '@/assets/images/final-version-porfolio-hero.png';
 import ArrowDown from '@/assets/icons/arrow-down.svg';
 import StarIcon from '@/assets/icons/star.svg';
