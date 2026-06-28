@@ -1,6 +1,6 @@
 import React from 'react';
 import StarIcon from '@/assets/icons/star.svg';
-import { twMerge } from 'tailwind-merge';
+import { cn } from '@/utils/helpers';
 
 type Props = {
   title: string;
@@ -10,7 +10,7 @@ type Props = {
 
 const CardHeader = ({ title, description, className }: Props) => {
   return (
-    <div className={twMerge('-mt-1 flex flex-col', className)}>
+    <div className={cn('-mt-1 flex flex-col', className)}>
       <div className='inline-flex items-center gap-2'>
         <StarIcon className='size-9 text-green-300' />
         <h3 className='font-serif text-3xl'>{title}</h3>
