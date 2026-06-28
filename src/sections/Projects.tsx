@@ -4,12 +4,7 @@ import UpArrowRight from '@/assets/icons/arrow-up-right.svg';
 import SectionHeader from '@/components/SectionHeader';
 import Card from '@/components/Card';
 import GitHubIcon from '@/assets/icons/techLogos/github.svg';
-import Link from 'next/link';
-import {
-  GeneraGame,
-  GeneraRewardingTool,
-  GeneraSocialForum,
-} from '@/assets/images/myApps';
+import { GeneraGame, GeneraRewardingTool, GeneraSocialForum } from '@/assets/images/myApps';
 
 const portfolioProjects = [
   {
@@ -38,8 +33,7 @@ const portfolioProjects = [
       { title: 'Microservices Interactions' },
     ],
     link: 'https://genera-rewarding-tool.netlify.app/rewards-page#available-rewards-section',
-    github:
-      'https://github.com/jimzord12/RewardingTool-Frontend-Deploy/tree/final_version',
+    github: 'https://github.com/jimzord12/RewardingTool-Frontend-Deploy/tree/final_version',
     image: GeneraRewardingTool,
   },
   {
@@ -72,7 +66,7 @@ export const ProjectsSection = () => {
             <Card
               key={`${project.title}-${idx}`}
               className={
-                'shadow-intense-layered sticky md:px-10 md:pt-12 lg:gap-16 lg:px-20 lg:pb-0 lg:pt-16'
+                'sticky shadow-intense-layered md:px-10 md:pt-12 lg:gap-16 lg:px-20 lg:pb-0 lg:pt-16'
               }
               style={{
                 top: 64 + idx * 30,
@@ -102,21 +96,15 @@ export const ProjectsSection = () => {
                   </ul>
 
                   <div className='mt-8 flex items-center justify-between md:justify-start md:gap-8'>
-                    <a
-                      href={project.link}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
+                    <a href={project.link} target='_blank' rel='noopener noreferrer'>
                       <button className='inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-white px-6 font-bold text-gray-950 md:w-auto md:px-8'>
                         View Live Site
                         <UpArrowRight className='size-4' />
                       </button>
                     </a>
-                    <Link href={project.github} passHref legacyBehavior>
-                      <a target='_blank' rel='noopener noreferrer'>
-                        <GitHubIcon className='size-12 min-w-10 rounded-xl border bg-white p-1.5 text-gray-950 transition-all duration-500 hover:invert' />
-                      </a>
-                    </Link>
+                    <a href={project.github} target='_blank' rel='noopener noreferrer'>
+                      <GitHubIcon className='size-12 min-w-10 rounded-xl border bg-white p-1.5 text-gray-950 transition-all duration-500 hover:invert' />
+                    </a>
                   </div>
                 </section>
 
